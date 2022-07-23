@@ -35,6 +35,11 @@ const toggleSidebar = ()=>{
 
   sidebarOverlay.classList.toggle('hidden'); 
   sidebarOverlay.classList.toggle('block'); 
+
+  document.body.classList.toggle('overflow-hidden');
+  document.body.classList.toggle('overflow-scroll');
+
+
 }
 
 ////////// SIDE BAR (end) //////////
@@ -142,6 +147,8 @@ const openModal= document.querySelectorAll('[data-open-modal]');
 
 openModal.forEach((btn)=>{
 	btn.addEventListener('click', ()=>{
+    //disable scrollable body
+    document.body.style.overflow = 'hidden';
 
     //close all open modals
     const allModals = document.querySelectorAll('.modal-box');
@@ -164,7 +171,9 @@ openModal.forEach((btn)=>{
     closeModal= document.querySelectorAll('[data-close-modal]');
     closeModal.forEach((btn)=>{
       btn.addEventListener('click',()=>{
-  
+        //disable scrollable body
+        document.body.style.overflow = 'scroll';
+
         //select desired modal
         const modal= document.querySelector(btn.dataset.closeModal);
         
