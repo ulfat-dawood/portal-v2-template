@@ -1,0 +1,21 @@
+{
+  "name": "portal-v2-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwind -i ./css/tailwind/tailwind_input.css -o ./css/tailwind/tailwind_output.css",
+    "watch": "tailwind -i ./css/tailwind/tailwind_input.css -o ./css/tailwind/tailwind_output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.1.4",
+    "tailwindcss-rtl": "^0.9.0",
+    "tom-select": "^2.0.3"
+  },
+  "devDependencies": {
+    "postcss-import": "^14.1.0"
+  }
+}
