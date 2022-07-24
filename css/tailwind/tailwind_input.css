@@ -21,7 +21,7 @@
       @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700   ;
     }
     .box { 
-        @apply p-4 bg-white border border-grey-border1 rounded-lg 
+        @apply bg-white border border-grey-border1 rounded-lg 
     }
     .input-box {
         @apply px-4 py-2 bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1

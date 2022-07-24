@@ -48,6 +48,7 @@ const toggleSidebar = ()=>{
 
 
 ////////// TOM SELECT (start) //////////
+/*
 new TomSelect("#select-clinic",{
 	sortField: {
 		field: "text",
@@ -76,6 +77,8 @@ new TomSelect("#banner-select-doctor",{
 		direction: "asc"
 	}
 });
+
+*/
 ////////// TOM SELECT (end) //////////
 
 
@@ -171,13 +174,13 @@ openModal.forEach((btn)=>{
     closeModal= document.querySelectorAll('[data-close-modal]');
     closeModal.forEach((btn)=>{
       btn.addEventListener('click',()=>{
-        //disable scrollable body
+        //enable scrollable body
         document.body.style.overflow = 'scroll';
 
         //select desired modal
         const modal= document.querySelector(btn.dataset.closeModal);
         
-        //close desired modal + overlay
+        //close desired modal
         modal.classList.remove('active')
   
         //remove all overlays
@@ -197,26 +200,3 @@ openModal.forEach((btn)=>{
 
 
 ////////// MODAL (end) //////////
-
-
-/* 
-
-<div class="modal-overlay" data-close-modal='#momo'></div> 
-<div  data-close-modal='#momo'> X </div> 
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-  display: none;
-
-  &.active {
-    display: block;
-  }
-}
-
-*/
