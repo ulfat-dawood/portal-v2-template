@@ -31,6 +31,7 @@ module.exports = {
           bg2 : '#f5f5f5',
           border1 : '#eeeeee',
           border2 : '#dbdbdb',
+          border3 : '#b5b5b5', 
           text1 : '#909090',
           text2 : '#707070'
 

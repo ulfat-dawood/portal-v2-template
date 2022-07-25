@@ -297,151 +297,182 @@
 
 
     <div class="content-wrapper min-h-screen" >
+        <div class="container xl:px-[9vw]">
+            <!-- BREAD CRUMBS  -->
+            <nav class="bread-crumbs p-4">
+                <ul class=" flex gap-2">
+                    <li>
+                        <a href="./index.html" class="text-xs text-grey-text1">home</a>
+                    </li>
+                    <li >
+                        <span class=" text-xs text-grey-text1">/</span>
+                        <a href="./index.html" class="text-xs font-normal">orthopeadic clinic</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <!-- BREAD CRUMBS  -->
-        <nav class="bread-crumbs container p-4">
-            <ul class=" flex gap-2">
-                <li>
-                    <a href="./index.html" class="text-xs text-grey-text1">home</a>
-                </li>
-                <li >
-                    <span class=" text-xs text-grey-text1">/</span>
-                    <a href="./index.html" class="text-xs font-normal">orthopeadic clinic</a>
-                </li>
-            </ul>
-        </nav>
+            <!-- FILTERS + CARDS  -->
+            <div class="flex gap-10">
 
-        <!-- FILTERS + CARDS  -->
-        <div class="flex gap-10 container">
-
-            <!-- FLTERS  -->
-            <div class="box w-60 flex-shrink-0">
-                <div >
-                    <!-- title  -->
-                    <div class="font-normal p-5 pb-0">
-                        Filters
-                    </div>
-                    <!-- filters -->
-                    <ul class="divide-y-[0.5px] divide-grey-border1">
-                        <li class="py-3 px-5 space-y-2">
-                            <div>
-                                <i class="text-grey-text1 text-xs icofont-location-pin"></i>
-                                <span class="text-grey-text1 text-xs" >City</span>
-                            </div>
-                            <input placeholder="Jeddah" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
-                        </li>
-
-                        <li class="py-3 px-5 space-y-2">
-                            <div>
-                                <i class="text-grey-text1 text-xs icofont-doctor"></i>
-                                <span class="text-grey-text1 text-xs" >Title</span>
-                            </div>
-                            <input placeholder="Jeddah" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
-                        </li>
-
-                        <li class="py-3 px-5 space-y-2">
-                            <div>
-                                <i class="text-grey-text1 text-xs icofont-ui-calendar"></i>
-                                <span class="text-grey-text1 text-xs" >Appointment type</span>
-                            </div>
-                            <input placeholder="Online" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
-                        </li>
-
-                        <li class="py-3 px-5 space-y-2">
-                            <div>
-                                <i class="text-grey-text1 text-xs icofont-safety"></i>
-                                <span class="text-grey-text1 text-xs" >Insurance</span>
-                            </div>
-                            <input placeholder="Bupa" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
-                        </li>
-
-                        <li class="py-3 px-5 space-y-2">
-                            <div>
-                                <i class="text-grey-text1 text-xs icofont-male"></i>
-                                <span class="text-grey-text1 text-xs" >Gender</span>
-                            </div>
-                            <input placeholder="Male" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
-                        </li>
-
-                        <li class="py-3 px-5 space-y-2">
-                            <div>
-                                <i class="text-grey-text1 text-xs icofont-bill"></i>
-                                <span class="text-grey-text1 text-xs" >Price range</span>
-                            </div>
-                            <input placeholder="No preference" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
-                        </li>
-
-
-                    </ul>
-
-                    <!-- submit button  -->
-                    <div class="p-5">
-                        <button class="py-1 text-xs bg-main-600 w-full rounded-lg">
-                            <i class="text-main-50 text-xs icofont-search-1"></i>
-                            <span class="text-main-50 text-xs">Find doctor</span>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- SORTING + DOCTORS CARDS + PAGINATION -->
-            <div class="flex-grow">
-
-                <!-- sort  -->
-                <div class="flex items-center">
-                    <i class="icofont-sort text-xs"></i> 
-                    <span class="text-xs">Sort by:</span>
-                    <input placeholder="price highest to lowest" type="text" class="px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
-
-                </div>
-
-                <!-- cards  -->
-                <div class="flex flex-col gap-10">
-                    <div class="box flex">
-                        <!-- doctor img  -->
-                        <div>
-                            img
+                <!-- FLTERS  -->
+                <div class="hidden box w-60 flex-shrink-0 lg:block">
+                    <div >
+                        <!-- title  -->
+                        <div class="font-normal p-5 pb-0">
+                            Filters
                         </div>
-                        <!-- card information -->
-                        <div>
-                            <!-- doctor info  -->
-                            <div>
-                                <!-- start  -->
+                        <!-- filters -->
+                        <ul class="divide-y-[0.5px] divide-grey-border1">
+                            <li class="py-3 px-5 space-y-2">
                                 <div>
-                                    <div>Dr. Hussam Hasan Darwish</div>
-                                    <div class="">Dentist</div>
-                                    <div class="">SR 500</div>
-                                    <div class="">Nearest appoitnemt today in 1 hours 6 minutes</div>
+                                    <i class="text-grey-text1 text-xs icofont-location-pin"></i>
+                                    <span class="text-grey-text1 text-xs" >City</span>
                                 </div>
-                                <!-- end  -->
+                                <input placeholder="Jeddah" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                            </li>
+
+                            <li class="py-3 px-5 space-y-2">
+                                <div>
+                                    <i class="text-grey-text1 text-xs icofont-doctor"></i>
+                                    <span class="text-grey-text1 text-xs" >Title</span>
+                                </div>
+                                <input placeholder="Jeddah" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                            </li>
+
+                            <li class="py-3 px-5 space-y-2">
+                                <div>
+                                    <i class="text-grey-text1 text-xs icofont-ui-calendar"></i>
+                                    <span class="text-grey-text1 text-xs" >Appointment type</span>
+                                </div>
+                                <input placeholder="Online" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                            </li>
+
+                            <li class="py-3 px-5 space-y-2">
+                                <div>
+                                    <i class="text-grey-text1 text-xs icofont-safety"></i>
+                                    <span class="text-grey-text1 text-xs" >Insurance</span>
+                                </div>
+                                <input placeholder="Bupa" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                            </li>
+
+                            <li class="py-3 px-5 space-y-2">
+                                <div>
+                                    <i class="text-grey-text1 text-xs icofont-male"></i>
+                                    <span class="text-grey-text1 text-xs" >Gender</span>
+                                </div>
+                                <input placeholder="Male" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                            </li>
+
+                            <li class="py-3 px-5 space-y-2">
+                                <div>
+                                    <i class="text-grey-text1 text-xs icofont-bill"></i>
+                                    <span class="text-grey-text1 text-xs" >Price range</span>
+                                </div>
+                                <input placeholder="No preference" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                            </li>
+
+
+                        </ul>
+
+                        <!-- submit button  -->
+                        <div class="p-5">
+                            <button class="py-1 text-xs bg-main-600 w-full rounded-lg">
+                                <i class="text-main-50 text-xs icofont-search-1"></i>
+                                <span class="text-main-50 text-xs">Find doctor</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SORTING + DOCTORS CARDS + PAGINATION -->
+                <div class="flex-grow">
+
+                    <!-- sort + mobile filter -->
+                    <div class="flex justify-between mb-2 lg:justify-end">
+
+                        <!-- FILTERS  -->
+                        <div class="box px-1 cursor-pointer hover:bg-grey-bg1 lg:hidden">
+                            <i class="icofont-filter text-xs text-grey-border3"></i>
+                            <span class="text-xs text-grey-border3">Filters</span>
+                        </div>
+
+                        <!-- SORT  -->
+                        <div class="flex gap-2 items-center">
+                            <i class="icofont-sort text-xs text-grey-border3"></i> 
+                            <span class="text-xs text-grey-border3">Sort by</span>
+                            <input placeholder="price highest to lowest" type="text" class="px-3 py-1 text-xs box hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+
+                        </div>
+
+                    </div>
+
+                    <!-- cards  -->
+                    <div class="flex flex-col gap-10">
+                        <div class="box flex flex-col rounded-none sm:rounded-lg sm:flex-row">
+                            <!-- doctor img  -->
+                            <div class="hidden overflow-hidden basis-3/12 relative rounded-lg sm:rounded-te-none sm:rounded-be-none sm:block">
+                                <figure class="absolute w-full h-full">
+                                    <a href="#"><img class="object-cover w-full h-full" src="./img/dr_hussam.png" alt=""></a>
+                                </figure>
+                            </div>
+                            <!-- card information -->
+                            <div class="flex-grow divide-y divide-grey-border1">
+                                <!-- doctor info  -->
                                 <div class="">
-                                    <div class="">View profile</div>
-                                    <div class="">Book appointment</div>
+                                    <a href="#" class="">
+                                        <div class="flex flex-col justify-between p-3 hover:bg-grey-bg1 md:flex-row">
+                                            <!-- start  -->
+                                            <div class="flex flex-col gap-5">
+                                                <div class="flex gap-2">
+                                                    <figure class="h-14 w-14 rounded-lg overflow-hidden sm:hidden">
+                                                        <img class="w-full h-full object-cover" src="./img/dr_hussam.png" alt="">
+                                                    </figure>
+                                                    <div>
+                                                        <div class="font-normal text-sm sm:text-lg ">Dr. Hussam Hasan Darwish</div>
+                                                        <div class="text-grey-border3 text-sm">Dentist</div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="text-grey-border3 text-sm"> <i class="icofont-bill-alt text-grey-border3 text-sm"></i> SR 500</div>
+                                                    <div class="text-grey-border3 text-sm"><i class="icofont-clock-time text-grey-border3 text-xs"></i> Nearest appoitnemt today in 1 hours 6 minutes</div>
+                                                </div>
+
+                                            </div>
+                                            <!-- end  -->
+                                            <div class="flex gap-2 mt-2 md:flex-col md:mt-0">
+                                                <div class="border  border-main-600 text-main-600 rounded-lg text-center text-xs px-3 py-1 bg-white  hover:bg-main-50 basis-1/2 sm:basis-auto">View profile</div>
+                                                <div class="border border-secondary-300 text-secondary-300 rounded-lg text-center text-xs px-3 py-1 bg-white hover:bg-secondary-100 basis-1/2 sm:basis-auto">Book appointment</div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
-                            <!-- clinic info  -->
-                            <div>
-                                <!-- start  -->
+                                <!-- clinic info  -->
                                 <div>
-                                    <div>Mafasel Clinics</div>
-                                    <div>
-                                        <i>location-pin</i>
-                                        <a href="">This is the address</a>
-                                    </div>
-                                </div>
-                                <!-- end  -->
-                                <div>
-                                    img here
+                                    <a href="#">
+                                        <div class="flex justify-between p-3 hover:bg-grey-bg1">
+                                            <!-- start  -->
+                                            <div>
+                                                <div class="text-grey-border3 text-sm font-normal">Mafasel Clinics</div>
+                                                <div>
+                                                    <i class="icofont-location-pin text-grey-border3 text-xs"></i><span class="text-grey-border3 text-xs">This is the address</span>
+                                                </div>
+                                            </div>
+                                            <!-- end  -->
+                                            <div class="basis-1/4">
+                                                <img src="./img/mafasel_logo.png" alt="" class="w-full h-full object-contain">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-
         </div>
-
     </div>
 
 
