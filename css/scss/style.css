@@ -3,6 +3,8 @@
 - THEME STYLES
 - TOM SELECT CLINIC + DOC
 - SWIPER JS CLINICS
+- SWIPER JS PARTNERS
+- SWIPER JS days
 - MODAL
 
 - RTL ENHANCMENTS
@@ -137,6 +139,43 @@ body * {
   background-color: #dbdbdb;
 }
 #partners .swiper-pagination.partners .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #909090;
+}
+
+#slots .swiper-button-prev.days,
+#slots .swiper-button-next.days {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+  border-radius: 50%;
+  bottom: 50%;
+  transform: translateY(50%);
+  top: unset;
+}
+#slots .swiper-button-prev.days:hover,
+#slots .swiper-button-next.days:hover {
+  box-shadow: 2px 0 2px 0px rgba(0, 0, 0, 0.126);
+}
+#slots .swiper-button-prev.days::after,
+#slots .swiper-button-next.days::after {
+  font-size: x-small;
+  color: #dbdbdb;
+  position: absolute;
+}
+#slots .swiper-pagination.days {
+  bottom: -35px;
+}
+#slots .swiper-pagination.days .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: #dbdbdb;
+}
+#slots .swiper-pagination.days .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #909090;
 }
 

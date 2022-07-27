@@ -4,6 +4,8 @@
 - THEME STYLES
 - TOM SELECT CLINIC + DOC
 - SWIPER JS CLINICS
+- SWIPER JS PARTNERS
+- SWIPER JS days
 - MODAL
 
 - RTL ENHANCMENTS
@@ -178,6 +180,41 @@ body * {
 }
 }
 ////////// SWIPER JS PARTNERS (end) //////////
+
+
+////////// SWIPER JS DAYS (start) //////////
+#slots{
+.swiper-button-prev.days,
+.swiper-button-next.days{
+    height: fit-content; width: fit-content;
+    padding: 15px; 
+    background-color: #fff;
+    border: 1px solid $grey-border1;
+    border-radius: 50%;
+    bottom: 50%;
+    transform: translateY(50%);
+    top:unset; 
+    &:hover{box-shadow: 2px 0 2px 0px rgba(0, 0, 0, 0.126);}
+    &::after{
+        font-size: x-small;
+        color: $grey-border2;
+        position: absolute;
+    }
+}
+
+.swiper-pagination.days{
+  bottom: -35px;
+
+  .swiper-pagination-bullet{
+      opacity: 1;
+      background-color: $grey-border2;
+      &.swiper-pagination-bullet-active{
+          background-color: $grey-text1;
+      }
+  }
+}
+}
+////////// SWIPER JS DAYS (end) //////////
 
 
 

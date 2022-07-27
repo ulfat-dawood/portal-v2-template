@@ -5,6 +5,7 @@
 - TOM SELECT
 - SWIPER JS CLINICS
 - SWIPER JS PARNERS
+- SWIPER JS DAYS
 - MODAL
 
 ////// TABLE OF CONTENT end //////
@@ -83,11 +84,12 @@ new TomSelect("#banner-select-doctor",{
 
 
 ////////// SWIPER JS CLINICS (start) //////////
-const swiperClinics = new Swiper('.swiper.clinics', {
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
+const swiperClinics = new Swiper('.swiper.clinics', 
+  {
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     slidesPerView: 'auto',
     spaceBetween: 30,
 
@@ -107,9 +109,27 @@ const swiperClinics = new Swiper('.swiper.clinics', {
     },
 
 
-  });
+  }
+);
 ////////// SWIPER JS CLINICS (end) //////////
 
+
+////////// SWIPER JS DAYS (start) //////////
+var swiper = new Swiper(".available-days", {
+
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+
+  // Optional parameters
+  direction: 'horizontal',
+  // loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+////////// SWIPER JS DAYS (end) //////////
 
 
 
