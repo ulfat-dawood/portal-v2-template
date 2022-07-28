@@ -6,6 +6,7 @@
 - SWIPER JS PARTNERS
 - SWIPER JS days
 - MODAL
+- CUSTOM RADIO BUTTONS
 
 - RTL ENHANCMENTS
 - NXN FONT + ICO FONT
@@ -251,6 +252,27 @@ body * {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.button-group-pills .btn {
+  border-radius: 5px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border-color: black;
+  background-color: yellow;
+  color: black;
+}
+.button-group-pills .btn.active {
+  border-color: purple;
+  background-color: orange;
+  color: black;
+  box-shadow: none;
+}
+.button-group-pills .btn:hover {
+  border-color: red;
+  background-color: green;
+  color: blue;
 }
 
 html[dir=rtl] #sidebar {

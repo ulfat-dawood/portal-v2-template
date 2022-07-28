@@ -376,7 +376,7 @@
         <div class="flex items-start gap-10">
 
             <!-- start section  -->
-            <div class="basis-1/4 flex-grow-0 flex-shrink-0">
+            <div class="basis-1/4 flex-grow-0 flex-shrink-0 hidden lg:block">
                 <div class="box p-5 space-y-5">
 
                     <div class="w-full aspect-square rounded-lg overflow-hidden">
@@ -435,10 +435,10 @@
 
             <!-- end section  -->
             <!-- <div class="basis-3/4 flex-grow-0  flex flex-col gap-5"> JEEEEEEE -->
-            <div class="basis-3/4 flex-grow-0 flex flex-col gap-5 flex-shrink-0 min-h-0 min-w-0">
+            <div class="basis-full flex-grow-0 flex flex-col gap-5 flex-shrink-0 min-h-0 min-w-0 lg:basis-3/4">
 
                 <!-- DOCTOR CARD (MOBILE)  -->
-                <div class="box flex flex-col rounded-none sm:rounded-lg sm:flex-row md:hidden">
+                <div class="box flex flex-col rounded-none sm:rounded-lg sm:flex-row lg:hidden">
                     <!-- doctor img  -->
                     <div class="hidden overflow-hidden basis-3/12 relative rounded-lg sm:rounded-te-none sm:rounded-be-none sm:block">
                         <figure class="absolute w-full h-full">
@@ -448,67 +448,67 @@
                     <!-- card information -->
                     <div class="flex-grow divide-y divide-grey-border1">
                         <!-- doctor info  -->
-                        <div class="">
-                            <a href="#" class="">
-                                <div class="flex flex-col justify-between p-3 hover:bg-grey-bg1 md:flex-row">
-                                    <!-- start  -->
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex gap-2">
-                                            <figure class="h-14 w-14 rounded-lg overflow-hidden sm:hidden">
-                                                <img class="w-full h-full object-cover" src="./img/dr_hussam.png" alt="">
-                                            </figure>
-                                            <div>
-                                                <div class="font-normal text-sm sm:text-lg ">Dr. Hussam Hasan Darwish</div>
-                                                <div class="text-grey-border3 text-sm">Orthopeadic</div>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="text-grey-border3 text-sm"> 
-                                                <i class="icofont-bill-alt text-grey-border3 text-sm"></i> 
-                                                SR 250
-                                                <span class="text-grey-border3 text-xs line-through" >SR 500</span>
-                                                <span class="text-secondary-300 font-normal text-xs bg-secondary-100 rounded-full px-1">-50%</span>
-                                            </div>
-                                            <div class="text-grey-border3 text-sm">
-                                                <i class="icofont-clock-time text-grey-border3 text-xs"></i> 
-                                                Nearest appoitnemt today in 
-                                                <span class="text-grey-border3 text-xs rounded-full bg-grey-bg2 px-2 font-normal block ms-4 w-fit sm:inline sm:ms-auto">1 hours 6 minutes</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- end  -->
-                                    <div class="flex gap-2 mt-2 md:flex-col md:mt-0">
-                                        <div class="border  border-main-600 text-main-600 rounded-lg text-center text-xs px-3 py-1 bg-white  hover:bg-main-50 basis-1/2 sm:basis-auto">View profile</div>
-                                        <div class="border border-secondary-300 text-secondary-300 rounded-lg text-center text-xs px-3 py-1 bg-white hover:bg-secondary-100 basis-1/2 sm:basis-auto">Book appointment</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- clinic info  -->
-                        <div>
-                            <a href="#">
-                                <div class="flex justify-between p-3 hover:bg-grey-bg1">
-                                    <!-- start  -->
+                        <div class="flex flex-col justify-between p-3 hover:bg-grey-bg1 md:flex-row">
+                            <!-- start  -->
+                            <div class="flex flex-col gap-5">
+                                <div class="flex gap-2">
+                                    <figure class="h-14 w-14 rounded-lg overflow-hidden sm:hidden">
+                                        <img class="w-full h-full object-cover" src="./img/dr_hussam.png" alt="">
+                                    </figure>
                                     <div>
-                                        <div class="text-grey-border3 text-sm font-normal">Mafasel Clinics</div>
-                                        <div>
-                                            <i class="icofont-location-pin text-grey-border3 text-xs"></i><span class="text-grey-border3 text-xs">This is the address</span>
-                                        </div>
-                                    </div>
-                                    <!-- end  -->
-                                    <div class="basis-1/4">
-                                        <img src="./img/mafasel_logo.png" alt="" class="w-full h-full object-contain">
+                                        <div class="font-normal text-sm sm:text-lg ">Dr. Hussam Hasan Darwish</div>
+                                        <div class="text-grey-border3 text-sm">Orthopeadic</div>
                                     </div>
                                 </div>
-                            </a>
+
+                                <div>
+                                    <div class="text-grey-border3 text-sm"> 
+                                        <i class="icofont-bill-alt text-grey-border3 text-sm"></i> 
+                                        SR 250
+                                        <span class="text-grey-border3 text-xs line-through" >SR 500</span>
+                                        <span class="text-secondary-300 font-normal text-xs bg-secondary-100 rounded-full px-1">-50%</span>
+                                    </div>
+                                    <div class="text-grey-border3 text-sm">
+                                        <i class="icofont-clock-time text-grey-border3 text-xs"></i> 
+                                        Nearest appoitnemt today in 
+                                        <span class="text-grey-border3 text-xs rounded-full bg-grey-bg2 px-2 font-normal ">1 hours 6 minutes</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-0">
+                                    <div class="text-sm">Specialized in</div>
+                                    <!-- tags  -->
+                                    <ul class="flex gap-2 flex-wrap mt-2">
+                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                                Hand and upper limb surgery
+                                            </a>
+                                        </li>
+                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                                Bones
+                                            </a>
+                                        </li>
+                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                                Adult orthopedic
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+
+                            </div>
+
                         </div>
+
+
+
                     </div>
                 </div>
 
                 <!-- CLINIC INFO  -->
-                <div class="box hover:bg-grey-bg1 hidden md:block">
+                <div class="box hover:bg-grey-bg1 rounded-none sm:rounded-lg ">
                     <a href="#">
                         <div class="flex divide-x divide-grey-border1">
                             <div class="p-5">
@@ -528,7 +528,7 @@
                 </div>
 
                 <!-- DR INFO LIST  -->
-                <div class="box p-5 ">
+                <div class="box p-5 rounded-none sm:rounded-lg ">
                     <div class="font-normal">About Dr. Husam</div>
                     <ul class="ms-9 mt-3 space-y-2 list-disc list-outside">
 
@@ -561,7 +561,7 @@
                 </div>
 
                 <!-- appointment slots -->
-                <div id="slots" class="box p-5">
+                <div id="slots" class="box p-5 rounded-none sm:rounded-lg ">
 
                     <div class="font-normal mb-5">Select a day</div>
 
@@ -691,7 +691,7 @@
 
                     </div>
 
-                    <div class="slots w-10/12 my-10 mx-auto ">
+                    <div class="slots w-10/12 my-10 mx-auto justify-between">
                         <div class="flex flex-wrap gap-x-6 gap-y-4">
 
                             <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">

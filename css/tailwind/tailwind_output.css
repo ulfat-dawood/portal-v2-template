@@ -14,6 +14,7 @@
 - SWIPER JS PARTNERS
 - SWIPER JS days
 - MODAL
+- CUSTOM RADIO BUTTONS
 
 - RTL ENHANCMENTS
 - NXN FONT + ICO FONT
@@ -290,6 +291,29 @@ body * {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.button-group-pills .btn {
+  border-radius: 5px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border-color: black;
+  background-color: yellow;
+  color: black;
+}
+
+.button-group-pills .btn.active {
+  border-color: purple;
+  background-color: orange;
+  color: black;
+  box-shadow: none;
+}
+
+.button-group-pills .btn:hover {
+  border-color: red;
+  background-color: green;
+  color: blue;
 }
 
 html[dir=rtl] #sidebar {
@@ -9886,6 +9910,10 @@ video {
   flex-basis: 75%;
 }
 
+.basis-full {
+  flex-basis: 100%;
+}
+
 .basis-3\/12 {
   flex-basis: 25%;
 }
@@ -10116,6 +10144,11 @@ video {
   border-color: rgb(238 238 238 / var(--tw-border-opacity));
 }
 
+.border-red-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-border-opacity));
+}
+
 .border-main-600 {
   --tw-border-opacity: 1;
   border-color: rgb(78 153 150 / var(--tw-border-opacity));
@@ -10124,11 +10157,6 @@ video {
 .border-secondary-300 {
   --tw-border-opacity: 1;
   border-color: rgb(255 161 122 / var(--tw-border-opacity));
-}
-
-.border-red-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-border-opacity));
 }
 
 .bg-grey-bg1 {
@@ -10280,23 +10308,22 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .pb-0 {
   padding-bottom: 0px;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .pt-10 {
@@ -10307,16 +10334,16 @@ video {
   padding-bottom: 10rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
 .pt-3 {
   padding-top: 0.75rem;
 }
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-center {
@@ -10681,16 +10708,8 @@ video {
     margin-top: 0px;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:\!flex {
     display: flex !important;
-  }
-
-  .md\:hidden {
-    display: none;
   }
 
   .md\:h-\[440px\] {
@@ -10825,6 +10844,10 @@ video {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:basis-3\/4 {
+    flex-basis: 75%;
   }
 
   .lg\:flex-row {
