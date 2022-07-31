@@ -1,18 +1,19 @@
 
 /*
-///////////////// TABLE OF CONTENT start ////////////////
+================= TABLE OF CONTENT start =================
 - THEME STYLES
 - TOM SELECT CLINIC + DOC
 - SWIPER JS CLINICS
 - SWIPER JS PARTNERS
 - SWIPER JS days
 - MODAL
-- CUSTOM RADIO BUTTONS
+- FILTERS RADIO
+
 
 - RTL ENHANCMENTS
 - NXN FONT + ICO FONT
 
-///////////////// TABLE OF CONTENT end /////////////////
+================= TABLE OF CONTENT end =================
 */
 
 
@@ -291,9 +292,52 @@ body * {
 
 }
 
-
-
 ////////// MODAL (end) //////////
+
+
+
+////////// FILTERS RADIO (start) //////////
+.filters-radio{
+  display: flex;
+  gap: 2px; 
+  flex-wrap: wrap;
+  
+  input[type='radio']{
+    width: 0px; height: 0px; opacity: 0;
+
+    &:checked + label.radio-btn{
+      background-color: $main-200;
+      color: $main-600;
+      font-weight: 400;
+
+      &:hover{
+        background-color: $main-200;
+        cursor:default;
+      }
+
+      i{color: $main-600;}
+
+    }
+
+    & + label.radio-btn{
+      background-color: $grey-border1;
+      padding:1px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+
+
+      &:hover{
+        background-color: $grey-border2;
+      }
+
+      .small{font-size: 8px;}
+    }
+  }
+
+}
+
+////////// FILTERS RADIO (end) //////////
 
 
 

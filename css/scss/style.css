@@ -1,17 +1,18 @@
 /*
-///////////////// TABLE OF CONTENT start ////////////////
+================= TABLE OF CONTENT start =================
 - THEME STYLES
 - TOM SELECT CLINIC + DOC
 - SWIPER JS CLINICS
 - SWIPER JS PARTNERS
 - SWIPER JS days
 - MODAL
-- CUSTOM RADIO BUTTONS
+- FILTERS RADIO
+
 
 - RTL ENHANCMENTS
 - NXN FONT + ICO FONT
 
-///////////////// TABLE OF CONTENT end /////////////////
+================= TABLE OF CONTENT end =================
 */
 body * {
   font-family: "Poppins", sans-serif;
@@ -252,6 +253,42 @@ body * {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.filters-radio {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+.filters-radio input[type=radio] {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.filters-radio input[type=radio]:checked + label.radio-btn {
+  background-color: #D6F7F2;
+  color: #4E9996;
+  font-weight: 400;
+}
+.filters-radio input[type=radio]:checked + label.radio-btn:hover {
+  background-color: #D6F7F2;
+  cursor: default;
+}
+.filters-radio input[type=radio]:checked + label.radio-btn i {
+  color: #4E9996;
+}
+.filters-radio input[type=radio] + label.radio-btn {
+  background-color: #eeeeee;
+  padding: 1px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.filters-radio input[type=radio] + label.radio-btn:hover {
+  background-color: #dbdbdb;
+}
+.filters-radio input[type=radio] + label.radio-btn .small {
+  font-size: 8px;
 }
 
 .button-group-pills .btn {
