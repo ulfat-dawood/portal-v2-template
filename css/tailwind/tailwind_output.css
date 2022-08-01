@@ -9652,6 +9652,69 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.mf-tab {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  -webkit-padding-start: 1.25rem;
+          padding-inline-start: 1.25rem;
+  -webkit-margin-start: 0.75rem;
+          margin-inline-start: 0.75rem;
+}
+
+.mf-tab:hover {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.mf-tab.active {
+  border-width: 0px;
+  --tw-border-opacity: 1;
+  border-color: rgb(78 153 150 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 254 251 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(78 153 150 / var(--tw-text-opacity));
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+}
+
+[dir="ltr"] .mf-tab.active {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+[dir="rtl"] .mf-tab.active {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.mf-tab.active {
+  border-inline-start-width: 2px;
+}
+
+.mf-tab.active > * {
+  --tw-text-opacity: 1;
+  color: rgb(78 153 150 / var(--tw-text-opacity));
+}
+
+.mf-tab.active:hover {
+  cursor: default;
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 254 251 / var(--tw-bg-opacity));
+}
+
+[dir="ltr"] .mf-tab.active:hover {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+[dir="rtl"] .mf-tab.active:hover {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
 .fixed {
   position: fixed;
 }
@@ -9728,6 +9791,10 @@ video {
 
 .m-auto {
   margin: auto;
+}
+
+.m-3 {
+  margin: 0.75rem;
 }
 
 .mx-5 {
@@ -9962,6 +10029,10 @@ video {
   flex-basis: 25%;
 }
 
+.basis-4\/12 {
+  flex-basis: 33.333333%;
+}
+
 .basis-1\/2 {
   flex-basis: 50%;
 }
@@ -10010,6 +10081,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch;
 }
 
 .justify-start {
@@ -10062,6 +10137,10 @@ video {
 
 .gap-20 {
   gap: 5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-x-6 {
@@ -10390,6 +10469,10 @@ video {
   padding-top: 1.25rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -10528,6 +10611,11 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.pe-3 {
+  -webkit-padding-end: 0.75rem;
+          padding-inline-end: 0.75rem;
 }
 
 .pe-40 {
