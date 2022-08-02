@@ -374,9 +374,9 @@
     <div class="content-wrapper min-h-screen" >
         <div class="container xl:px-[9vw]">
 
-            <div class="flex gap-10 mt-10 items-stretch">
+            <div class="flex gap-10 my-5 items-stretch h-[75vh] lg:my-10 lg:h-auto">
                 <!-- MF - MENU  -->
-                <div class="basis-4/12 box">
+                <div class="basis-4/12 box hidden lg:block">
 
                     <!-- patient name  -->
                     <div class="flex items-center gap-5 bg-grey-bg1 rounded-lg py-3 px-5 m-3"> 
@@ -443,8 +443,342 @@
                 </div>
 
                 <!-- MF - CONTENT  -->
-                <div class="basis-full box p-5">
+                <div class="basis-full box flex flex-col p-1.5 sm:3 md:p-5 lg:p-10">
+                    <!-- TITLE  -->
+                    <h2 class="mb-5 text-sm flex-shrink-0 flex-grow-0  text-center md:text-start " >Coming appointments</h2>
 
+                    <!-- CONTENT  -->
+                    <div class="flex-grow relative">
+                        <!-- FIXED CONTETN WRAPPER  -->
+                        <div id="MF-FILE-CONTENT" class=" absolute left-0 right-0 top-0 bottom-0 overflow-y-auto">
+
+                            <!-- Coming appointments  -->
+                            <div  class="timeline flex flex-col me-2">
+
+                                <!-- ADD NEW APPT  -->
+                                <div class="flex justify-center md:justify-start">
+                                    
+                                    <!-- time stamp  -->
+                                    <div  class="timestamp self-center justify-self-center w-24 justify-end relative me-6 hidden md:flex group hover:after:">
+                                        <div class=" rounded-lg p-2.5 bg-grey-bg2 cursor-pointer group-hover:bg-grey-border1"><i class="icofont-ui-add text-sm"></i></div>
+                                    </div>
+
+                                    <!-- line  -->
+                                    <div class="line hidden md:block">
+
+                                    </div>
+
+                                    <!-- appt info  -->
+                                    <div class="flex bg-grey-bg2 rounded-lg cursor-pointer p-2 gap-2 my-3 ms-0 me-0 md:ms-3 hover:bg-grey-border1">
+                                        
+                                        <div class="text-xs font-normal px-4">
+                                            <i class="icofont-ui-add text-xs me-2  md:hidden"></i>
+                                            Add a new appointment
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- APPT #1  -->
+                                <div class="flex">
+                                    
+                                    <!-- time stamp  -->
+                                    <div  class="timestamp self-center rounded-lg bg-grey-bg2 p-1.5 w-24 flex-col items-center relative me-6 hidden md:flex">
+                                        <div class="text-xs">23/12/2022</div>
+                                        <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                    </div>
+
+                                    <!-- line  -->
+                                    <div class="line hidden md:block">
+
+                                    </div>
+
+                                    <!-- appt info  -->
+                                    <div class="flex flex-grow bg-grey-bg2 rounded-lg p-2 gap-2 flex-col my-3 ms-0 me-0 md:ms-3 md:flex-row">
+
+                                        <!-- timestamp for mobile  -->
+                                        <div  class="timestamp self-start rounded-lg bg-grey-bg2 p-1 flex gap-3 items-center relative me-6 md:hidden">
+                                            <div class="text-xs">23/12/2022</div>
+                                            <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                        </div>
+
+
+                                        <!-- doctor details       -->
+                                        <div class="flex-grow bg-white rounded-lg d p-1 flex gap-2">
+
+                                            <div class="bg-main-100 w-12 rounded-lg overflow-hidden relative" >
+                                                <figure class="absolute left-0 right-0 top-0 bottom-0 ">
+                                                    <img src="./img/dr_hussam.png" alt="" class="w-full h-full object-cover">
+                                                </figure>
+                                            </div>
+
+                                            <div>
+                                                <div class="font-normal text-sm">Dr. Hussam Hussain Darwish And A Long Surname</div>
+                                                <div class="text-xs text-grey-border3">Orthopeadic</div>
+                                                <div class="text-xs text-grey-border3">Mefasel clinic for joints</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- appt details  -->
+                                        <div class="flex flex-row gap-2 justify-start py-1 md:flex-col md:py-0">
+
+                                            <div class="text-center bg-secondary-100 rounded-lg text-secondary-300 text-xs font-normal px-2 py-1 cursor-pointer hover:bg-secondary-200">
+                                                <i class="icofont-ui-remove text-secondary-300 text-xdos"></i>
+                                                cancel
+                                            </div>
+
+                                            <div class="text-center bg-white rounded-lg text-xs font-normal px-2 py-1">
+                                                <i class="icofont-bill-alt"></i>
+                                                SR 250 
+                                                <span class="line-through">500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- APPT #2  -->
+                                <div class="flex">
+                                    
+                                    <!-- time stamp  -->
+                                    <div  class="timestamp self-center rounded-lg bg-grey-bg2 p-1.5 w-24 flex-col items-center relative me-6 hidden md:flex">
+                                        <div class="text-xs">23/12/2022</div>
+                                        <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                    </div>
+
+                                    <!-- line  -->
+                                    <div class="line hidden md:block">
+
+                                    </div>
+
+                                    <!-- appt info  -->
+                                    <div class="flex flex-grow bg-grey-bg2 rounded-lg p-2 gap-2 flex-col my-3 ms-0 me-0 md:ms-3 md:flex-row">
+
+                                        <!-- timestamp for mobile  -->
+                                        <div  class="timestamp self-start rounded-lg bg-grey-bg2 p-1 flex gap-3 items-center relative me-6 md:hidden">
+                                            <div class="text-xs">23/12/2022</div>
+                                            <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                        </div>
+
+
+                                        <!-- doctor details       -->
+                                        <div class="flex-grow bg-white rounded-lg d p-1 flex gap-2">
+
+                                            <div class="bg-main-100 w-12 rounded-lg overflow-hidden relative" >
+                                                <figure class="absolute left-0 right-0 top-0 bottom-0 ">
+                                                    <img src="./img/dr_female.png" alt="" class="w-full h-full object-cover">
+                                                </figure>
+                                            </div>
+
+                                            <div>
+                                                <div class="font-normal text-sm">Dr. Jana Fareed</div>
+                                                <div class="text-xs text-grey-border3">Orthopeadic</div>
+                                                <div class="text-xs text-grey-border3">Mefasel clinic for joints</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- appt details  -->
+                                        <div class="flex flex-row gap-2 justify-start py-1 md:flex-col md:py-0">
+
+                                            <div class="text-center bg-secondary-100 rounded-lg text-secondary-300 text-xs font-normal px-2 py-1 cursor-pointer hover:bg-secondary-200">
+                                                <i class="icofont-ui-remove text-secondary-300 text-xdos"></i>
+                                                cancel
+                                            </div>
+
+                                            <div class="text-center bg-white rounded-lg text-xs font-normal px-2 py-1">
+                                                <i class="icofont-bill-alt"></i>
+                                                SR 250 
+                                                <span class="line-through">500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- APPT #3  -->
+                                <div class="flex">
+                                    
+                                    <!-- time stamp  -->
+                                    <div  class="timestamp self-center rounded-lg bg-grey-bg2 p-1.5 w-24 flex-col items-center relative me-6 hidden md:flex">
+                                        <div class="text-xs">23/12/2022</div>
+                                        <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                    </div>
+
+                                    <!-- line  -->
+                                    <div class="line hidden md:block">
+
+                                    </div>
+
+                                    <!-- appt info  -->
+                                    <div class="flex flex-grow bg-grey-bg2 rounded-lg p-2 gap-2 flex-col my-3 ms-0 me-0 md:ms-3 md:flex-row">
+
+                                        <!-- timestamp for mobile  -->
+                                        <div  class="timestamp self-start rounded-lg bg-grey-bg2 p-1 flex gap-3 items-center relative me-6 md:hidden">
+                                            <div class="text-xs">23/12/2022</div>
+                                            <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                        </div>
+
+
+                                        <!-- doctor details       -->
+                                        <div class="flex-grow bg-white rounded-lg d p-1 flex gap-2">
+
+                                            <div class="bg-main-100 w-12 rounded-lg overflow-hidden relative" >
+                                                <figure class="absolute left-0 right-0 top-0 bottom-0 ">
+                                                    <img src="./img/dr_male.png" alt="" class="w-full h-full object-cover">
+                                                </figure>
+                                            </div>
+
+                                            <div>
+                                                <div class="font-normal text-sm">Dr. Hamza Badr</div>
+                                                <div class="text-xs text-grey-border3">Orthopeadic</div>
+                                                <div class="text-xs text-grey-border3">Mefasel clinic for joints</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- appt details  -->
+                                        <div class="flex flex-row gap-2 justify-start py-1 md:flex-col md:py-0">
+
+                                            <div class="text-center bg-secondary-100 rounded-lg text-secondary-300 text-xs font-normal px-2 py-1 cursor-pointer hover:bg-secondary-200">
+                                                <i class="icofont-ui-remove text-secondary-300 text-xdos"></i>
+                                                cancel
+                                            </div>
+
+                                            <div class="text-center bg-white rounded-lg text-xs font-normal px-2 py-1">
+                                                <i class="icofont-bill-alt"></i>
+                                                SR 250 
+                                                <span class="line-through">500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- APPT #4  -->
+                                <div class="flex">
+                                    
+                                    <!-- time stamp  -->
+                                    <div  class="timestamp self-center rounded-lg bg-grey-bg2 p-1.5 w-24 flex-col items-center relative me-6 hidden md:flex">
+                                        <div class="text-xs">23/12/2022</div>
+                                        <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                    </div>
+
+                                    <!-- line  -->
+                                    <div class="line hidden md:block">
+
+                                    </div>
+
+                                    <!-- appt info  -->
+                                    <div class="flex flex-grow bg-grey-bg2 rounded-lg p-2 gap-2 flex-col my-3 ms-0 me-0 md:ms-3 md:flex-row">
+
+                                        <!-- timestamp for mobile  -->
+                                        <div  class="timestamp self-start rounded-lg bg-grey-bg2 p-1 flex gap-3 items-center relative me-6 md:hidden">
+                                            <div class="text-xs">23/12/2022</div>
+                                            <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                        </div>
+
+
+                                        <!-- doctor details       -->
+                                        <div class="flex-grow bg-white rounded-lg d p-1 flex gap-2">
+
+                                            <div class="bg-main-100 w-12 rounded-lg overflow-hidden relative" >
+                                                <figure class="absolute left-0 right-0 top-0 bottom-0 ">
+                                                    <img src="./img/dr_hussam.png" alt="" class="w-full h-full object-cover">
+                                                </figure>
+                                            </div>
+
+                                            <div>
+                                                <div class="font-normal text-sm">Dr. Hussam Hussain Darwish</div>
+                                                <div class="text-xs text-grey-border3">Orthopeadic</div>
+                                                <div class="text-xs text-grey-border3">Mefasel clinic for joints</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- appt details  -->
+                                        <div class="flex flex-row gap-2 justify-start py-1 md:flex-col md:py-0">
+
+                                            <div class="text-center bg-secondary-100 rounded-lg text-secondary-300 text-xs font-normal px-2 py-1 cursor-pointer hover:bg-secondary-200">
+                                                <i class="icofont-ui-remove text-secondary-300 text-xdos"></i>
+                                                cancel
+                                            </div>
+
+                                            <div class="text-center bg-white rounded-lg text-xs font-normal px-2 py-1">
+                                                <i class="icofont-bill-alt"></i>
+                                                SR 250 
+                                                <span class="line-through">500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- APPT #5  -->
+                                <div class="flex">
+                                    
+                                    <!-- time stamp  -->
+                                    <div  class="timestamp self-center rounded-lg bg-grey-bg2 p-1.5 w-24 flex-col items-center relative me-6 hidden md:flex">
+                                        <div class="text-xs">23/12/2022</div>
+                                        <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                    </div>
+
+                                    <!-- line  -->
+                                    <div class="line hidden md:block">
+
+                                    </div>
+
+                                    <!-- appt info  -->
+                                    <div class="flex flex-grow bg-grey-bg2 rounded-lg p-2 gap-2 flex-col my-3 ms-0 me-0 md:ms-3 md:flex-row">
+
+                                        <!-- timestamp for mobile  -->
+                                        <div  class="timestamp self-start rounded-lg bg-grey-bg2 p-1 flex gap-3 items-center relative me-6 md:hidden">
+                                            <div class="text-xs">23/12/2022</div>
+                                            <div class="text-xs"><i class="icofont-clock-time text-xs"></i> 09:00</div>
+                                        </div>
+
+
+                                        <!-- doctor details       -->
+                                        <div class="flex-grow bg-white rounded-lg d p-1 flex gap-2">
+
+                                            <div class="bg-main-100 w-12 rounded-lg overflow-hidden relative" >
+                                                <figure class="absolute left-0 right-0 top-0 bottom-0 ">
+                                                    <img src="./img/dr_female.png" alt="" class="w-full h-full object-cover">
+                                                </figure>
+                                            </div>
+
+                                            <div>
+                                                <div class="font-normal text-sm">Dr. Maha Hadeer Almusa</div>
+                                                <div class="text-xs text-grey-border3">Orthopeadic</div>
+                                                <div class="text-xs text-grey-border3">Mefasel clinic for joints</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- appt details  -->
+                                        <div class="flex flex-row gap-2 justify-start py-1 md:flex-col md:py-0">
+
+                                            <div class="text-center bg-secondary-100 rounded-lg text-secondary-300 text-xs font-normal px-2 py-1 cursor-pointer hover:bg-secondary-200">
+                                                <i class="icofont-ui-remove text-secondary-300 text-xdos"></i>
+                                                cancel
+                                            </div>
+
+                                            <div class="text-center bg-white rounded-lg text-xs font-normal px-2 py-1">
+                                                <i class="icofont-bill-alt"></i>
+                                                SR 250 
+                                                <span class="line-through">500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>

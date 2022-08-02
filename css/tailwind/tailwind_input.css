@@ -36,7 +36,7 @@
         @apply rounded-lg bg-grey-bg2  cursor-pointer 
     }
     .mf-tab.active{
-        @apply ms-0 border-0 border-s-2 border-main-600 text-main-600 rounded-te-lg rounded-be-lg bg-main-100
+        @apply ms-0 border-0 border-s-2 border-main-600 text-main-600 rounded-te-lg rounded-be-lg bg-main-50
     }
     .mf-tab.active > *{@apply text-main-600}
     .mf-tab.active:hover{

@@ -8,6 +8,8 @@
 - SWIPER JS days
 - MODAL
 - FILTERS RADIO
+- APPT TIMELINE
+- CUSTOM SCROLLBAR
 
 
 - RTL ENHANCMENTS
@@ -233,8 +235,10 @@ body * {
   // potition
   position: fixed;
   z-index: 40;
+
   left: 50%; top: 0px;
   transform: translateX(-50%) translateY(-100%);
+
   // h/w
   width: 95vw;
   max-width: 800px;
@@ -248,8 +252,10 @@ body * {
   flex-direction: column;
 
   &.active{
-    transform: translateX(-50%) translateY(-50%);
-    left: 50%; top: 50%;
+    transform: translateX(-50%) ;
+    left: 50%; top: 10%;
+    // transform: translateX(-50%) translateY(-50%);
+    // left: 50%; top: 50%;
   }
 
   .modal-header{
@@ -374,6 +380,70 @@ body * {
 }
 
 //////////  CUSTOM RADIO BUTTONS (end) //////////
+
+
+
+
+//////////  APPT TIMELINE (start) //////////
+.timeline{
+
+  .timestamp::after{
+    content: ''; 
+    position:absolute;
+    border: 15px solid transparent;
+    border-left-color: $grey-bg2;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .line{
+    width: 1px;
+    height: auto;
+    background-color: $main-600;
+    position: relative;
+
+    &::after{
+      content: ''; 
+      position:absolute;
+      height: 5px; width: 5px;
+      border-radius: 50%;
+      background-color: $main-600;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+}
+//////////  APPT TIMELINE (end) //////////
+
+
+
+//////////  CUSTOM SCROLLBAR (start) //////////
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;   
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grey-border2; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $grey-text1; 
+}
+
+//////////  CUSTOM SCROLLBAR (end) //////////
 
 
 
