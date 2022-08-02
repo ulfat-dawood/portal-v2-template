@@ -387,14 +387,22 @@ body * {
 //////////  APPT TIMELINE (start) //////////
 .timeline{
 
-  .timestamp::after{
-    content: ''; 
-    position:absolute;
-    border: 15px solid transparent;
-    border-left-color: $grey-bg2;
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
+  .timestamp{
+
+    &::after{
+      content: ''; 
+      position:absolute;
+      border: 15px solid transparent;
+      border-left-color: $grey-bg2;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.add-btn:hover::after{
+      border-left-color: $grey-border1;
+
+    }
   }
 
   .line{

@@ -323,6 +323,9 @@ body * {
   top: 50%;
   transform: translateY(-50%);
 }
+.timeline .timestamp.add-btn:hover::after {
+  border-left-color: #eeeeee;
+}
 .timeline .line {
   width: 1px;
   height: auto;
