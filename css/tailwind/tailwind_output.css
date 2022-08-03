@@ -10090,14 +10090,6 @@ video {
   min-width: 0px;
 }
 
-.min-w-\[\] {
-  min-width: ;
-}
-
-.min-w-\[80px\] {
-  min-width: 80px;
-}
-
 .min-w-\[100px\] {
   min-width: 100px;
 }
@@ -10492,12 +10484,12 @@ video {
   padding: 2.5rem;
 }
 
-.p-2\.5 {
-  padding: 0.625rem;
-}
-
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
 }
 
 .px-2 {
@@ -10842,6 +10834,11 @@ video {
 .hover\:bg-main-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(247 255 253 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-main-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 247 242 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-secondary-100:hover {
