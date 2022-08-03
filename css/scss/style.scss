@@ -10,6 +10,7 @@
 - FILTERS RADIO
 - APPT TIMELINE
 - CUSTOM SCROLLBAR
+- STARTING DATE
 
 
 - RTL ENHANCMENTS
@@ -452,6 +453,44 @@ body * {
 }
 
 //////////  CUSTOM SCROLLBAR (end) //////////
+
+
+
+
+//////////  STARTING DATE (start) //////////
+.starting-date{
+
+  position: relative;
+
+  &::after{
+    content: ''; 
+    height: 100%;
+    position:absolute;
+    border: 22px solid transparent;
+    border-right-color: $grey-border1;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+//////////  STARTING DATE (end) //////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

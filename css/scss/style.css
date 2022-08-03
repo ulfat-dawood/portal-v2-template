@@ -9,6 +9,7 @@
 - FILTERS RADIO
 - APPT TIMELINE
 - CUSTOM SCROLLBAR
+- STARTING DATE
 
 
 - RTL ENHANCMENTS
@@ -362,6 +363,20 @@ body * {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #909090;
+}
+
+.starting-date {
+  position: relative;
+}
+.starting-date::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  border: 22px solid transparent;
+  border-right-color: #eeeeee;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 html[dir=rtl] #sidebar {
