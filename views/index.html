@@ -3,7 +3,7 @@
 
 <head>
     <!-- the css output purged file  -->
-    <link rel="stylesheet" href="./css/tailwind/tailwind_output.css">
+    <link rel="stylesheet" href="../css/tailwind/tailwind_output.css">
     <!-- tom select  -->
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.3/dist/css/tom-select.css" rel="stylesheet">
     <!-- Google fonts -->
@@ -228,8 +228,7 @@
 
     <!-- TAB BAR MODALS (end)-->
 
-    
-    
+
     <!-- NAVIGATION BAR  (start)-->
     <section id="navbar" class="sticky top-0 z-20 box rounded-none flex h-20 justify-between items-center md:px-10">
 
@@ -272,7 +271,7 @@
                 <div id="medical-file-btn-wrapper" class="relative group">
                     <div id="medical-file-btn">
                         <div 
-                            class="bg-secondary-100 text-secondary-300 py-2 px-8 rounded-full font-normal cursor-default hover:bg-secondary-200 group-hover:bg-secondary-200">
+                            class="bg-secondary-100 text-secondary-300 py-2 px-8 rounded-full font-light cursor-default hover:bg-secondary-200 group-hover:bg-secondary-200">
                             Medical file
                             <i class="icofont-arrow-right inline text-secondary-300 group-hover:hidden"></i>
                             <i class="icofont-arrow-down  hidden text-secondary-300 group-hover:inline"></i>
@@ -369,108 +368,280 @@
     </div>
     <!-- SIDEBAR (end)-->
 
+    <div class="content-wrapper min-h-screen">
+    <!-- BANNER  (start)-->
+    <section id="banner" class="box container mt-5">
+        <div class="m-auto flex  flex-col-reverse  py-10 justify-between items-center border-red-700 w-12/12 lg:flex-row lg:flex-row lg:w-11/12 2xl:w-10/12">
+
+            <!-- start section -->
+            <div class="mt-10 w-full lg:w-6/12">
+                <div class="text-2xl text-center lg:text-left">Find your doctor</div>
+                <div class="text-4xl mt-2 text-center lg:text-left">And <span class="text-main-600">book</span> an
+                    appointment now</div>
+
+                <form class="flex w-full flex-col gap-0.5 mt-10 md:flex-row ">
+                    <select name="clinic" id="banner-select-clinic" class="banner-select-clinic"
+                        placeholder="Select clinic" autocomplete="off">
+                        <option value="Dental">Dental</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Herbology">Herbology</option>
+                        <option value="Othepedic">Othepedic</option>
+                        <option value="Gynacology">Gynacology</option>
+                    </select>
+
+                    <select name="dctor" id="banner-select-doctor" class="banner-select-doctor"
+                        placeholder="Type dctor/hospital name" autocomplete="off">
+                        <optgroup label="Centers"></optgroup>
+                        <option value="Mafasel">Mafasel</option>
+                        <option value="Saba">Saba</option>
+                        </optgroup>
+                        <optgroup label="Doctors"></optgroup>
+                        <option value="Hussam">Dr. Hussam Darwish</option>
+                        <option value="Amal">Dr. Amal Faisel</option>
+                        <option value="Asma">Dr.Asma Kamel</option>
+                        </optgroup>
+                    </select>
+
+                    <button type="submit"
+                        class="text-xs flex-shrink-0 flex-grow-1 bg-main-600 px-3 py-3 mt-3 rounded-lg text-grey-bg2 md:mt-0 md:py-0 md:rounded-e-lg  md:rounded-s-none over:bg-main-500">
+                        <i class="icofont-search-1 text-grey-bg2"></i>
+                        Find doctor
+                    </button>
+                </form>
+            </div>
+
+            <!-- end section -->
+            <div class="w-full lg:w-5/12">
+                <img class="mx-auto" src="../img/banner-img.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- BANNER  (end)-->
 
 
-    <div class="content-wrapper min-h-screen" >
-        <div class="container xl:px-[9vw]">
+    <!-- CLINICS (start) -->
+    <section id="clinics" class="mt-28">
+        <div class="container">
 
-            <div class="flex gap-10 my-5 items-stretch h-[75vh] lg:my-10 lg:h-auto">
-                <!-- MF - MENU  -->
-                <div class="basis-4/12 box hidden lg:block">
+            <!-- title  -->
+            <h2 class="text-grey-text1 text-lg text-center mb-8">Find doctors by speciality</h2>
 
-                    <!-- patient name  -->
-                    <div class="flex items-center gap-5 bg-grey-bg1 rounded-lg py-3 px-5 m-3"> 
-                        <div class="h-8 w-8 flex-shrink-0 bg-grey-border2 ring-4 ring-grey-border1 rounded-full flex justify-center items-center ">
-                            <i class="icofont-user-alt-7 text-grey-border1"></i>
+            <!-- Slider -->
+            <div class="parners-swiper-container relative">
+                <div class="swiper clinics w-11/12 m-auto">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Dental-Clinic  text-main-600 text-lg "></span>
+                            <span class="group-hover:text-main-600">Dental-Clinic</span>
                         </div>
-                        <div class="text-grey-text1 text-sm">Ahmed's <br> e-medical file</div>
-                    </div>
 
-                    <!-- menu items  -->
-                    <ul class="flex flex-col gap-8 pt-5 pb-10 pe-3">
-                        <li>
-                            <div class=" flex gap-5 justify-start mf-tab">
-                                <i class="icofont-ui-calendar"></i>
-                                <span class="text-xs font-normal " >Coming appointments</span> 
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class=" flex gap-5 justify-start mf-tab">
-                                <i class="icofont-history"></i>
-                                <span class="text-xs font-normal " >Passt visits</span> 
-                            </div>
-                        </li>
-
-
-                        <li>
-                            <div class=" flex gap-5 justify-start mf-tab active">
-                                <i class="icofont-thermometer"></i>
-                                <span class="text-xs font-normal " >Sick leaves</span> 
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class=" flex gap-5 justify-start mf-tab">
-                                <i class="icofont-pills"></i>
-                                <span class="text-xs font-normal " >Prescriptions</span> 
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class=" flex gap-5 justify-start mf-tab">
-                                <i class="icofont-radio-active"></i>
-                                <span class="text-xs font-normal " >Radiology</span> 
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class=" flex gap-5 justify-start mf-tab">
-                                <i class="icofont-laboratory"></i>
-                                <span class="text-xs font-normal " >Lab tests</span> 
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class=" flex gap-5 justify-start mf-tab">
-                                <i class="icofont-paperclip"></i>
-                                <span class="text-xs font-normal " >Medical reports</span> 
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <!-- MF - CONTENT  -->
-                <div class="basis-full box flex flex-col p-1.5 sm:3 md:p-5 lg:p-10">
-                    <!-- TITLE  -->
-                    <h2 class="mb-5 text-sm flex-shrink-0 flex-grow-0  text-center md:text-start " >Sick leaves</h2>
-
-                    <!-- CONTENT  -->
-                    <div class="flex-grow relative">
-                        <!-- FIXED CONTETN WRAPPER  -->
-                        <div id="MF-FILE-CONTENT" class=" absolute left-0 right-0 top-0 bottom-0 overflow-y-auto">
-
-                            <!-- Coming appointments  -->
-                            <div  class="timeline flex flex-col me-1">
-
-
-
-                            </div>
-
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-General-Clinic  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">General-Clinic</span>
                         </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Pain-Treatment  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Pain-Treatment</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Physiotherapy  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Physiotherapy</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Orthopedic-Clinic  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Orthopedic-Clinic</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Internal-Medicine  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Internal-Medicine</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Dietary  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Dietary</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Well-Baby  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Well-Baby</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Chronic-Diseases  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Chronic-Diseases</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Pregnancy-Care  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Pregnancy-Care</span>
+                        </div>
+
+                        <div class="swiper-slide box pt-3 pb-2 rounded-full flex gap-3 justify-center hover:bg-main-50 cursor-pointer group !w-fit px-6">
+                            <span class="nxn-Psychological-Health  text-main-600 text-lg"></span>
+                            <span class="group-hover:text-main-600">Psychological-Health</span>
+                        </div>
+
+
                     </div>
                 </div>
+                <!-- navigation buttons -->
+                <div class="swiper-button-prev clinics !hidden md:!flex"></div>
+                <div class="swiper-button-next clinics !hidden md:!flex"></div>
+                <!-- pagination -->
+                <div class="swiper-pagination clinics "></div>
+            </div>
+        </div>
+    </section>
+    <!-- CLINICS (end) -->
 
+
+    <!-- PARTNERS (start) -->
+    <section id="partners" class="w-full mt-28 py-20 bg-grey-bg2 ">
+        <div class="container">
+            <!-- title  -->
+            <h2 class="text-lg text-center mb-14 text-grey-text1">Stratigic Parners</h2>
+
+            <!-- Slider -->
+            <div class="clinic-swiper-container relative">
+                <div class="swiper partners w-11/12 m-auto">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide bg-white rounded-lg cursor-pointer flex flex-col divide-x-0 divide-y divide-grey-border1  md:flex-row md:divide-x-0 md:divide-y">
+                            <!-- Partner Logo  -->
+                            <div class="w-full flex  justify-center items-center md:w-2/5 ">
+                                <img class="w-6/12 md:w-10/12" src="https://mafaselclinic.com/wp-content/uploads/2021/06/Mafasel-Logo-Full-Color.png" alt="">
+                            </div>
+
+                            <!-- Partner details  -->
+                            <div class="md:w-3/5 p-10" >
+
+                                <div class="text-3xl text-center md:text-start">
+                                    Mafasel Clinic
+                                </div>
+
+                                <p class="text-grey-border2 text-center md:text-start">
+                                    Pioneers in promoting bone & joint health by providing comprehensive high quality care in a healthy work.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide bg-white rounded-lg cursor-pointer flex flex-col divide-x-0 divide-y divide-grey-border1  md:flex-row md:divide-x-0 md:divide-y">
+                            <!-- Partner Logo  -->
+                            <div class="w-full flex  justify-center items-center md:w-2/5 ">
+                                <img class="w-6/12 md:w-10/12" src="https://mafaselclinic.com/wp-content/uploads/2021/06/Mafasel-Logo-Full-Color.png" alt="">
+                            </div>
+
+                            <!-- Partner details  -->
+                            <div class="md:w-3/5 p-10" >
+
+                                <div class="text-3xl text-center md:text-start">
+                                    Mafasel Clinic
+                                </div>
+
+                                <p class="text-grey-border2 text-center md:text-start">
+                                    Pioneers in promoting bone & joint health by providing comprehensive high quality care in a healthy work.
+                                </p>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <!-- navigation buttons -->
+                <div class="swiper-button-prev partners !hidden md:!flex"></div>
+                <div class="swiper-button-next partners !hidden md:!flex"></div>
+                <!-- pagination -->
+                <div class="swiper-pagination partners"></div>
+            </div>
+        </div>
+    </section>
+    <!-- PARTNERS (end) -->
+
+
+    <!-- FEATURES (start) -->
+    <section id="features" class="mt-28">
+        <div class="container">
+        <div class="px-5 flex justify-evenly flex-wrap gap-20 lg:flex-nowrap sm:px-0">
+
+            <div class="flex flex-col items-center  w-full flex-grow-0 flex-shrink-0 md:w-4/12 lg:w-1/5 md:items-start">
+                <div class="text-3xl "><i class="icofont-calendar text-main-600 "></i></div>
+                <div class="text-center md:text-start text-xl font-medium">Book online with ease and comfort</div>
+                <div class="text-center md:text-start text-grey-text1">
+                    This is an easy way to book your appoitnment. it is fast and efferient and time saving for both 
+                </div>
+            </div>
+
+            
+            <div class="flex flex-col items-center  w-full flex-grow-0 flex-shrink-0 md:w-4/12 lg:w-1/5 md:items-start">
+                <div class="text-3xl "><i class="icofont-cloud-refresh text-main-600 "></i></div>
+                <div class="text-center md:text-start text-xl font-medium">Book online with ease and comfort</div>
+                <div class="text-center md:text-start text-grey-text1">
+                    This is an easy way to book your appoitnment. it is fast and efferient and time saving for both 
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center  w-full flex-grow-0 flex-shrink-0 md:w-4/12 lg:w-1/5 md:items-start">
+                <div class="text-3xl "><i class="icofont-checked text-main-600 "></i></div>
+                <div class="text-center md:text-start text-xl font-medium">Book online with ease and comfort</div>
+                <div class="text-center md:text-start text-grey-text1">
+                    This is an easy way to book your appoitnment. it is fast and efferient and time saving for both 
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center  w-full flex-grow-0 flex-shrink-0 md:w-4/12 lg:w-1/5 md:items-start">
+                <div class="text-3xl "><i class="icofont-bars text-main-600 "></i></div>
+                <div class="text-center md:text-start text-xl font-medium">Book online with ease and comfort</div>
+                <div class="text-center md:text-start text-grey-text1">
+                    This is an easy way to book your appoitnment. it is fast and efferient and time saving for both 
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+    <!-- FEATURES (end) -->
+
+
+    
+    <!-- MOBILE APP (start) -->
+    <section id="mobile-app" class="mt-56 mb-52">
+        <div class="container flex flex-col gap-10 lg:px-20 box md:flex-row md:py-0 md:h-[440px]">
+        
+            <!-- APP IMG  -->
+            <div class="flex justify-center items-center lg:w-7/12 md:w-7/12">
+                <img class="lg:w-auto w-5/12 h-auto mt-16" src="../img/mobile_app_1.png" alt="">
+                <img class="lg:w-auto w-5/12 h-auto -mt-16" src="../img/mobile_app_2.png" alt="">
+            </div>
+
+            <div class="flex flex-col justify-center gap-2 lg:w-5/12 md:w-7/12">
+                <h2 class="text-center text-4xl font-medium">Download the portal app</h2>
+                <p class="text-center">Access all your medical information from the portal app and get all your medical data and manage them in one place </p>
+                <div class="flex justify-center gap-10 pt-5">
+                    <img src="../img/download_app_android.png" alt="" class="w-4/12">
+                    <img src="../img/download_app_apple.jpeg" alt="" class="w-4/12">
+                </div>
             </div>
 
         </div>
+    </section>
+    <!-- MOBILE APP (end) -->
     </div>
 
 
     <!-- FOOTER (start) -->
-    <section id="footer" style="background-image: linear-gradient(rgba(40, 87, 93, 0.89), rgba(40, 87, 93, 0.89)), url('../../img/footer-bg.jpeg');background-repeat: no-repeat; background-size: cover;">
+    <section id="footer" style="background-image: linear-gradient(rgba(40, 87, 93, 0.89), rgba(40, 87, 93, 0.89)), url('../.../img/footer-bg.jpeg');background-repeat: no-repeat; background-size: cover;">
         <div class="container flex flex-col ">
 
             <!-- TOP PART -->
@@ -514,12 +685,12 @@
                         <p class="text-grey-bg1">Athir Portal powered by Athir corporation</p>
                         <p class="text-grey-bg1"><a href="https://athir.com.sa">www.athir.com.sa</a></p>
                     </div>
-                    <img class="h-full " src="./img/corp_white_logo.png" alt="">
+                    <img class="h-full " src="../img/corp_white_logo.png" alt="">
                 </div>
 
                 <!-- athir care  -->
                 <div class="flex flex-col sm:flex-row gap-2 justify-start items-center lg:w-6/12 ">
-                    <img class="h-full " src="./img/white_logo.png" alt="">
+                    <img class="h-full " src="../img/white_logo.png" alt="">
                     <div class="text-center sm:text-start" >
                         <p class="text-grey-bg1"> Copyright &copy; 2022 Athir Care.</p>
                         <p class="text-grey-bg1">All Rights Reserved</p>

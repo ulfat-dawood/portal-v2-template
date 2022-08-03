@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- the css output purged file  -->
+    <link rel="stylesheet" href="../css/tailwind/tailwind_output.css">
+    <!-- tom select  -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.3/dist/css/tom-select.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link h
+        ref="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Swiper JS  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal V2.0</title>
+</head>
+
+<body class="bg-grey-bg1 overflow-scroll">
+
+    <!-- TAB BAR (start) -->
+    <section id="tabbar" class="z-50 fixed left-[10px] right-[10px] bottom-[5px] bg-main-700 rounded-lg lg:hidden">
+        <nav class="flex justify-around p-3">
+            <div class="flex flex-col items-center px-2 rounded-lg hover:bg-main-600">
+               <div><i class="icofont-ui-home text-main-200 text-lg"></i></div> 
+               <div class="text-main-200 text-xs">HOME</div>
+            </div>
+
+            
+            <div data-open-modal='#medical-file'
+            class="flex flex-col items-center px-2 rounded-lg hover:bg-main-600">
+               <div><i class="icofont-ui-folder text-main-200 text-lg"></i></div> 
+               <div class="text-main-200 text-xs">MEDICAL FILE</div>
+            </div>
+
+            <div data-open-modal='#search'
+            class="flex flex-col items-center px-2 rounded-lg hover:bg-main-600">
+               <div><i class="icofont-search-1 text-main-200 text-lg"></i></div> 
+               <div class="text-main-200 text-xs">SEARH</div>
+            </div>
+
+            <div data-open-modal='#profile'
+            class="flex flex-col items-center px-2 rounded-lg hover:bg-main-600">
+               <div><i class="icofont-ui-user text-main-200 text-lg"></i></div> 
+               <div class="text-main-200 text-xs">PROFILE</div>
+            </div>
+
+
+        </nav>
+    </section>
+    <!-- TAB BAR (end) -->
+
+    <!-- TAB BAR MODALS (start)-->
+
+        <!-- MEDICAL FILE  -->
+        <div class="modal-box" id="medical-file" >
+            <header class="modal-header">
+                <div class="title">Search portal</div>
+                <div class="close-modal" data-close-modal='#medical-file'> <i class="icofont-close"></i> </div>
+            </header>
+
+            <div class="modal-content">
+
+                <div id="medical-file-dowpdown" class="">
+                    <ul class="flex flex-col gap-2 bg-white border border-grey-border1 rounded-lg  overflow-hidden mt-5 p-3">
+                        <li class="p-4 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Coming appointments</li>
+                        <li class="p-4 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Past visits</li>
+                        <li class="p-4 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Sick leaves</li>
+                        <li class="p-4 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Prescriptions</li>
+                        <li class="p-4 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Radiology</li>
+                        <li class="p-4 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Lab tests</li>
+                        <li class="p-4 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Medical reports</li>
+                    </ul>
+                </div>
+
+        
+            </div>
+        </div>
+
+
+        <!-- SEARCH  -->
+        <div class="modal-box" id="search" >
+            <header class="modal-header">
+                <div class="title">Search portal</div>
+                <div class="close-modal" data-close-modal='#search'> <i class="icofont-close"></i> </div>
+            </header>
+
+            <div class="modal-content">
+
+                <form class="flex w-full flex-col gap-0.5 md:flex-row ">
+                    <select name="clinic" id="modal-select-clinic" class="modal-select-clinic"
+                        placeholder="Select clinic" autocomplete="off">
+                        <option value="Dental">Dental</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Herbology">Herbology</option>
+                        <option value="Othepedic">Othepedic</option>
+                        <option value="Gynacology">Gynacology</option>
+                    </select>
+
+                    <select name="dctor" id="modal-select-doctor" class="modal-select-doctor"
+                        placeholder="Type dctor/hospital name" autocomplete="off">
+                        <optgroup label="Centers"></optgroup>
+                        <option value="Mafasel">Mafasel</option>
+                        <option value="Saba">Saba</option>
+                        </optgroup>
+                        <optgroup label="Doctors"></optgroup>
+                        <option value="Hussam">Dr. Hussam Darwish</option>
+                        <option value="Amal">Dr. Amal Faisel</option>
+                        <option value="Asma">Dr.Asma Kamel</option>
+                        </optgroup>
+                    </select>
+
+                    <button type="submit"
+                        class="text-xs flex-shrink-0 flex-grow-1 bg-main-600 px-3 py-3 mt-3 rounded-lg text-grey-bg2 md:mt-0 md:py-0 md:rounded-e-lg  md:rounded-s-none over:bg-main-500">
+                        <i class="icofont-search-1 text-grey-bg2"></i>
+                        Find doctor
+                    </button>
+                </form>
+
+                <div>
+                    <!-- title  -->
+                    <div class="font-normal p-5 pb-0">
+                        Filters
+                    </div>
+
+                    <!-- filters -->
+                    <ul class="divide-y-[0.5px] divide-grey-border1">
+                        <li class="py-3 px-5 space-y-2">
+                            <div>
+                                <i class="text-grey-text1 text-xs icofont-location-pin"></i>
+                                <span class="text-grey-text1 text-xs" >City</span>
+                            </div>
+                            <input placeholder="Jeddah" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                        </li>
+    
+                        <li class="py-3 px-5 space-y-2">
+                            <div>
+                                <i class="text-grey-text1 text-xs icofont-doctor"></i>
+                                <span class="text-grey-text1 text-xs" >Title</span>
+                            </div>
+                            <input placeholder="Jeddah" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                        </li>
+    
+                        <li class="py-3 px-5 space-y-2">
+                            <div>
+                                <i class="text-grey-text1 text-xs icofont-ui-calendar"></i>
+                                <span class="text-grey-text1 text-xs" >Appointment type</span>
+                            </div>
+                            <input placeholder="Online" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                        </li>
+    
+                        <li class="py-3 px-5 space-y-2">
+                            <div>
+                                <i class="text-grey-text1 text-xs icofont-safety"></i>
+                                <span class="text-grey-text1 text-xs" >Insurance</span>
+                            </div>
+                            <input placeholder="Bupa" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                        </li>
+    
+                        <li class="py-3 px-5 space-y-2">
+                            <div>
+                                <i class="text-grey-text1 text-xs icofont-male"></i>
+                                <span class="text-grey-text1 text-xs" >Gender</span>
+                            </div>
+                            <input placeholder="Male" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                        </li>
+    
+                        <li class="py-3 px-5 space-y-2">
+                            <div>
+                                <i class="text-grey-text1 text-xs icofont-bill"></i>
+                                <span class="text-grey-text1 text-xs" >Price range</span>
+                            </div>
+                            <input placeholder="No preference" type="text" class="w-full px-3 py-1 text-xs bg-grey-bg2 hover:bg-grey-border1 rounded-lg focus:ring-2 focus:outline-none focus:ring-grey-border1">
+                        </li>
+    
+    
+                    </ul>
+    
+                    <!-- submit button  -->
+                    <div class="p-5 space-y-3">
+                        <button type="submit" class="py-1 text-xs bg-main-600 w-full rounded-lg hover:bg-main-700">
+                            <i class="text-main-50 text-xs icofont-verification-check"></i>
+                            <span class="text-main-50 text-xs">Apply filters</span>
+                        </button>
+    
+                        <button type="submit" class="py-1 text-xs bg-secondary-100 w-full rounded-lg hover:bg-secondary-200 cursor-pointer">
+                            <i class="text-secondary-300 text-xs icofont-ui-remove"></i>
+                            <span class="text-secondary-300 text-xs font-normal">Clear filters</span>
+                        </button>
+                    </div>
+    
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PROFILE  -->
+        <div class="modal-box" id="profile" >
+            <header class="modal-header">
+                <div class="title">PROFILE</div>
+                <div class="close-modal" data-close-modal='#profile'> <i class="icofont-close"></i> </div>
+            </header>
+
+            <div class="modal-content">
+
+                <div id="user-options-dropdown" class=" ">
+                    <ul class="bg-white border border-grey-border1 p-3 space-y-2 rounded-lg mt-5 ">
+                        <li class="flex items-center gap-5 bg-grey-bg1 rounded-lg py-3 px-5 cursor-pointer hover:bg-grey-bg2"> 
+                            <div class="h-8 w-8 flex-shrink-0 bg-grey-border2 ring-4 ring-grey-border1 rounded-full flex justify-center items-center ">
+                                <i class="icofont-user-alt-7 text-grey-border1"></i>
+                            </div>
+                            <div class="text-grey-text1 text-sm">Ahmed's Profile</div>
+                        </li>
+                        <li class="text-grey-text1 text-sm py-3 px-5 cursor-pointer rounded-lg hover:bg-grey-bg1"> Logout <i class="icofont-logout text-grey-text1"></i></li>
+                    </ul>
+                </div>
+
+        
+            </div>
+        </div>
+
+
+    <!-- TAB BAR MODALS (end)-->
+
+    
+    
+    <!-- NAVIGATION BAR  (start)-->
+    <section id="navbar" class="sticky top-0 z-20 box rounded-none flex h-20 justify-between items-center md:px-10">
+
+        <!-- LOGO  -->
+        <div class=" h-11 w-40 ">
+            <img src="	https://athir.care/assets/img/athir-logo-colorful.svg" class="h-full" alt="">
+        </div>
+
+        <!-- SEARCH BAR -->
+        <form class="gap-0.5 hidden w-1/3 lg:flex">
+            <select name="clinic" id="select-clinic" class="select-clinic" placeholder="Select clinic"
+                autocomplete="off">
+                <option value="Dental">Dental</option>
+                <option value="Dermatology">Dermatology</option>
+                <option value="Herbology">Herbology</option>
+                <option value="Othepedic">Othepedic</option>
+                <option value="Gynacology">Gynacology</option>
+            </select>
+
+            <select name="doctor" id="select-doctor" class="select-doctor" placeholder="Type doctor/hospital name"
+                autocomplete="off">
+                <option value="Dental">Mafasel</option>
+                <option value="Dermatology">Saba</option>
+                <option value="Herbology">Dr. Hussam Darwish</option>
+                <option value="Othepedic">Dr. Amal Faisel</option>
+                <option value="Gynacology">Dr. Asma Kamel</option>
+            </select>
+
+            <button type="submit"
+                class="bg-grey-bg2 px-3 text-xs text-main-600 rounded-e-lg flex-shrink-0 flex-grow-0 hover:bg-grey-border1">
+                <i class="icofont-search-1"></i>
+            </button>
+        </form>
+
+
+        <!-- CTA -->
+        <div id="cta" class="flex gap-5 items-center">
+            <!-- MF + USER + HOME -->
+            <div class="hidden gap-5 items-center lg:flex">
+                <div id="medical-file-btn-wrapper" class="relative group">
+                    <div id="medical-file-btn">
+                        <div 
+                            class="bg-secondary-100 text-secondary-300 py-2 px-8 rounded-full font-normal cursor-default hover:bg-secondary-200 group-hover:bg-secondary-200">
+                            Medical file
+                            <i class="icofont-arrow-right inline text-secondary-300 group-hover:hidden"></i>
+                            <i class="icofont-arrow-down  hidden text-secondary-300 group-hover:inline"></i>
+                        </div>
+                        <!-- divide-y divide-grey-border1 -->
+                        <div id="medical-file-dowpdown" class="absolute w-56  bottom-[-335px] left-[50%] translate-x-[-50%]  hidden group-hover:block">
+                            <ul class="flex flex-col gap-2 bg-white border border-grey-border1 rounded-lg  overflow-hidden mt-5 p-3">
+                                <li class="py-2 px-5 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Coming appointments</li>
+                                <li class="py-2 px-5 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Past visits</li>
+                                <li class="py-2 px-5 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Sick leaves</li>
+                                <li class="py-2 px-5 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Prescriptions</li>
+                                <li class="py-2 px-5 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Radiology</li>
+                                <li class="py-2 px-5 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Lab tests</li>
+                                <li class="py-2 px-5 text-sm text-center text-grey-text1 bg-grey-bg1 rounded-lg hover:bg-grey-bg2 cursor-pointer">Medical reports</li>
+                            </ul>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div id="user-btn-wrapper" class="relative group" >
+                    <div class="user-profile text-grey-text1 bg-grey-bg2 rounded-full  py-2 px-3 hover:bg-grey-border1 group-hover:bg-grey-border1">
+                        <i class="icofont-ui-user "></i>
+                    </div>
+    
+                    <div id="user-options-dropdown" class="absolute bottom-[-150px] left-[50%] translate-x-[-50%] hidden  group-hover:block ">
+                        <ul class="bg-white border border-grey-border1 p-3 space-y-2 rounded-lg mt-5 ">
+                            <li class="flex items-center gap-5 bg-grey-bg1 rounded-lg py-3 px-5 cursor-pointer hover:bg-grey-bg2"> 
+                                <div class="h-8 w-8 flex-shrink-0 bg-grey-border2 ring-4 ring-grey-border1 rounded-full flex justify-center items-center ">
+                                    <i class="icofont-user-alt-7 text-grey-border1"></i>
+                                </div>
+                                <div class="text-grey-text1 text-sm">Ahmed's Profile</div>
+                            </li>
+                            <li class="text-grey-text1 text-sm py-3 px-5 cursor-pointer rounded-lg hover:bg-grey-bg1"> Logout <i class="icofont-logout text-grey-text1"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="user-profile text-grey-text1 bg-grey-bg2 rounded-full  py-2 px-3 hover:bg-grey-border1">
+                    <i class="icofont-ui-home"></i>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="open-sidebar" class="user-profile text-grey-text1  rounded-full  py-2 px-3 hover:bg-grey-bg2 cursor-pointer">
+                <i class="icofont-navigation-menu"></i>
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <!-- NAVIGATION BAR  (end)-->
+
+
+
+    <!-- SIDEBAR (start)-->
+    <div id="sidebar" class="translate-x-full transition-all z-50 fixed flex flex-col inset-y-0 -right-0 h-screen bg-main-600" >
+        <div id="sidebar-overlay" class=" hidden absolute bg-black opacity-30 bottom-0 top-0 w-screen z-10" style="right: 100%;" ></div>
+        <div id="close-sidebar" class=" text-grey-bg1 text-3xl self-end m-5 cursor-pointer w-fit rounded-full px-2.5 transition-all hover:bg-main-500"> &times; </div>
+
+        <div class="flex flex-col flex-grow  overflow-y-auto">
+            <div class="flex-grow space-y-10 mx-5 md:space-y-20">
+                <ul class="space-y-3">
+                    <li class="text-grey-bg1 bg-main-500 rounded py-2 pe-40 px-3 cursor-pointer hover:bg-main-400"><span class="arrow text-grey-bg1"> &lt; </span> Clinics  </li>
+                    <li class="text-grey-bg1 bg-main-500 rounded py-2 pe-40 px-3 cursor-pointer hover:bg-main-400">Contact us</li>
+                    <li class="text-grey-bg1 bg-main-500 rounded py-2 pe-40 px-3 cursor-pointer hover:bg-main-400">FAQ</li>
+                    <li class="text-grey-bg1 bg-main-500 rounded py-2 pe-40 px-3 cursor-pointer hover:bg-main-400">About Athir</li>
+                </ul>
+
+                <ul class="space-y-3">
+                    <li class="text-xs text-grey-bg1">Site settings:</li>
+                    <li class="text-grey-bg1">
+                        <i class="icofont-globe text-grey-bg1"></i> 
+                        العربية 
+                    </li>
+                    <li class="text-grey-bg1"> <i class="icofont-location-pin text-grey-bg1"></i> Jeddah <span class="decoration-1 text-xs text-grey-bg1">(change)</span> </li>
+
+                </ul>
+            </div>
+
+            <ul class="flex justify-center gap-4 mt-10 p-3 bg-main-500">
+                <li><i class="icofont-linkedin text-grey-bg1"></i></li>
+                <li><i class="icofont-instagram text-grey-bg1"></i></li>
+                <li><i class="icofont-facebook text-grey-bg1"></i></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <!-- SIDEBAR (end)-->
+
+
+
+    <div class="content-wrapper min-h-screen" >
+       <div class="container my-10">
+        <div class="flex items-start gap-10">
+
+            <!-- start section  -->
+            <div class="basis-1/4 flex-grow-0 flex-shrink-0 hidden lg:block">
+                <div class="box p-5 space-y-5">
+
+                    <div class="w-full aspect-square rounded-lg overflow-hidden">
+                        <img src="../img/dr_hussam.png" alt="" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="text-xl text-main-600 font-normal">
+                        Dr. Husam Hussain Darwish
+                    </div>
+                    
+                    <ul class="bg-grey-bg2 rounded-lg divide-y-4 divide-white">
+                        <li class="py-3 px-5 flex gap-4">
+                            <i class="icofont-stethoscope text-sm"></i>
+                            <span class="text-sm">Orthopeadic</span>
+                        </li>
+                        <li class="py-3 px-5 flex gap-4">
+                            <i class="icofont-clock-time text-sm"></i>
+                            <span class="text-sm">Nearest appointment today in 1 hours 6 minutes</span>
+                        </li>
+                        <li class="py-3 px-5 flex gap-4">
+                            <i class="icofont-bill-alt text-sm"></i>
+                            <span class="text-sm">
+                                SR 250
+                                <span class="text-grey-border3 text-xs line-through" >SR 500</span>
+                                <span class="text-secondary-300 font-normal text-xs bg-secondary-100 rounded-full px-1">-50%</span>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <div class="text-sm">Specialized in</div>
+                        <!-- tags  -->
+                        <ul class="flex gap-2 flex-wrap mt-2">
+                            <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                    Hand and upper limb surgery
+                                </a>
+                            </li>
+                            <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                    Bones
+                                </a>
+                            </li>
+                            <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                    Adult orthopedic
+                                </a>
+                            </li>
+                     
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- end section  -->
+            <!-- <div class="basis-3/4 flex-grow-0  flex flex-col gap-5"> JEEEEEEE -->
+            <div class="basis-full flex-grow-0 flex flex-col gap-5 flex-shrink-0 min-h-0 min-w-0 lg:basis-3/4">
+
+                <!-- DOCTOR CARD (MOBILE)  -->
+                <div class="box flex flex-col rounded-none sm:rounded-lg sm:flex-row lg:hidden">
+                    <!-- doctor img  -->
+                    <div class="hidden overflow-hidden basis-3/12 relative rounded-lg sm:rounded-te-none sm:rounded-be-none sm:block">
+                        <figure class="absolute w-full h-full">
+                            <a href="#"><img class="object-cover w-full h-full" src="../img/dr_hussam.png" alt=""></a>
+                        </figure>
+                    </div>
+                    <!-- card information -->
+                    <div class="flex-grow divide-y divide-grey-border1">
+                        <!-- doctor info  -->
+                        <div class="flex flex-col justify-between p-3 hover:bg-grey-bg1 md:flex-row">
+                            <!-- start  -->
+                            <div class="flex flex-col gap-5">
+                                <div class="flex gap-2">
+                                    <figure class="h-14 w-14 rounded-lg overflow-hidden sm:hidden">
+                                        <img class="w-full h-full object-cover" src="../img/dr_hussam.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <div class="font-normal text-sm sm:text-lg ">Dr. Hussam Hasan Darwish</div>
+                                        <div class="text-grey-border3 text-sm">Orthopeadic</div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="text-grey-border3 text-sm"> 
+                                        <i class="icofont-bill-alt text-grey-border3 text-sm"></i> 
+                                        SR 250
+                                        <span class="text-grey-border3 text-xs line-through" >SR 500</span>
+                                        <span class="text-secondary-300 font-normal text-xs bg-secondary-100 rounded-full px-1">-50%</span>
+                                    </div>
+                                    <div class="text-grey-border3 text-sm">
+                                        <i class="icofont-clock-time text-grey-border3 text-xs"></i> 
+                                        Nearest appoitnemt today in 
+                                        <span class="text-grey-border3 text-xs rounded-full bg-grey-bg2 px-2 font-normal ">1 hours 6 minutes</span>
+                                    </div>
+                                </div>
+
+                                <div class="pt-0">
+                                    <div class="text-sm">Specialized in</div>
+                                    <!-- tags  -->
+                                    <ul class="flex gap-2 flex-wrap mt-2">
+                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                                Hand and upper limb surgery
+                                            </a>
+                                        </li>
+                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                                Bones
+                                            </a>
+                                        </li>
+                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
+                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
+                                                Adult orthopedic
+                                            </a>
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!-- CLINIC INFO  -->
+                <div class="box hover:bg-grey-bg1 rounded-none sm:rounded-lg ">
+                    <a href="#">
+                        <div class="flex divide-x divide-grey-border1">
+                            <div class="p-5">
+                                <figure class=" h-full">
+                                    <img src="../img/mafasel_logo.png" alt="" class="h-full w-full object-contain">
+                                </figure>
+                            </div>
+                            <div class="p-5 space-y-1">
+                                <div class="text-sm font-normal">Mafasel Clinic</div>
+                                <div class="underline text-xs text-grey-border3">
+                                    <i class="icofont-location-pin text-grey-border3"></i>
+                                    Malik road, Jeddah, Saudi arabia
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- DR INFO LIST  -->
+                <div class="box p-5 rounded-none sm:rounded-lg ">
+                    <div class="font-normal">About Dr. Husam</div>
+                    <ul class="ms-9 mt-3 space-y-2 list-disc list-outside">
+
+                        <li class="text-grey-border3 text-sm">
+                               Eligendi mollitia quod ex minus sit provident eos exercitationem corporis quae.
+                        </li>                      
+                        
+                        <li class="text-grey-border3 text-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </li>
+
+                        <li class="text-grey-border3 text-sm">
+                            Consequatur magni voluptatem quisquam libero.
+                        </li>                      
+                        
+                        <li class="text-grey-border3 text-sm">
+                            Ab a assumenda maxime ipsa non dolor dignissimos excepturi odit esse aut possimus molestias doloremque nihil officia exercitationem quos rem voluptas, reiciendis dolorum laboriosam optio fugiat.
+                        </li>
+
+                        <li class="text-grey-border3 text-sm">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        </li>                      
+                        
+                        <li class="text-grey-border3 text-sm">
+                            Ea illum deserunt dignissimos cupiditate optio recusandae delectus eligendi culpa sit nam qui vero magni, quisquam id iure necessitatibus suscipit ipsum? Laboriosam.
+                        </li>
+
+                        
+                    </ul>
+                </div>
+
+                <!-- appointment slots -->
+                <div id="slots" class="box p-5 rounded-none sm:rounded-lg ">
+
+                    <div class="font-normal mb-5">Select a day</div>
+
+                    <div class="bg-grey-bg2 w-full rounded-lg p-3">
+
+                        <div class="parners-swiper-container relative">
+                            <div class="swiper available-days w-11/12 m-auto">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper ">
+
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- ITEM  -->
+                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
+                                        <div class="rounded-xl overflow-hidden">
+                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
+                                                Today
+                                            </div>
+                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
+                                                1-8-2022
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <!-- navigation buttons -->
+                            <div class="swiper-button-prev days !hidden md:!flex"></div>
+                            <div class="swiper-button-next days !hidden md:!flex"></div>
+                            <!-- pagination -->
+                            <div class="swiper-pagination days "></div>
+                        </div>
+
+                    </div>
+
+                    <div class="slots w-10/12 my-10 mx-auto justify-between">
+                        <div class="flex flex-wrap gap-x-6 gap-y-4">
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
+                                9:00 am
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       </div> 
+    </div>
+
+
+    <!-- FOOTER (start) -->
+    <section id="footer" style="background-image: linear-gradient(rgba(40, 87, 93, 0.89), rgba(40, 87, 93, 0.89)), url('../.../img/footer-bg.jpeg');background-repeat: no-repeat; background-size: cover;">
+        <div class="container flex flex-col ">
+
+            <!-- TOP PART -->
+            <div class="flex justify-center gap-10 w-full py-14 flex-col items-center md:flex-row">
+                <div class="md:w-4/12">
+                    <ul class="w-fit text-center mx-auto md:text-start">
+                        <h3 class="font-medium text-grey-bg1 mb-2">Athir Portal</h3>
+                        <li class="text-grey-bg1">Clinics</li>
+                        <li class="text-grey-bg1">About us</li>
+                        <li class="text-grey-bg1">FAQ</li>
+                        <li class="text-grey-bg1">Contact us</li>
+                    </ul>
+                </div>
+
+                <div class="md:w-4/12">
+                    <ul class="w-fit text-center mx-auto md:text-start">
+                        <h3 class="font-medium text-grey-bg1 mb-2">Why Athir Portal</h3>
+                        <li class="text-grey-bg1">Book online with ease</li>
+                        <li class="text-grey-bg1">Visit your medical file information</li>
+                        <li class="text-grey-bg1">Access all yout medical reports</li>
+                        <li class="text-grey-bg1">Manage your medical file</li>
+                    </ul>
+                </div>
+
+                <div class="md:w-4/12">
+                    <ul class="w-fit text-center mx-auto md:text-start">
+                        <h3 class="font-medium text-grey-bg1 mb-2">Payment methods</h3>
+                        <li class="text-grey-bg1">Mada</li>
+                        <li class="text-grey-bg1">Visa</li>
+                        <li class="text-grey-bg1">Mastercard</li>
+                        <li class="text-grey-bg1">Cash on arrival</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM PART  -->
+            <div class="flex flex-col justify-center items-center gap-10 pt-10 pb-40 lg:flex-row">
+                <!-- athir corp  -->
+                <div class="flex flex-col  gap-2 justify-center items-center lg:w-6/12 lg:flex-row sm:flex-row-reverse sm:justify-end">
+                    <div class="text-center lg:text-end sm:text-start" >
+                        <p class="text-grey-bg1">Athir Portal powered by Athir corporation</p>
+                        <p class="text-grey-bg1"><a href="https://athir.com.sa">www.athir.com.sa</a></p>
+                    </div>
+                    <img class="h-full " src="../img/corp_white_logo.png" alt="">
+                </div>
+
+                <!-- athir care  -->
+                <div class="flex flex-col sm:flex-row gap-2 justify-start items-center lg:w-6/12 ">
+                    <img class="h-full " src="../img/white_logo.png" alt="">
+                    <div class="text-center sm:text-start" >
+                        <p class="text-grey-bg1"> Copyright &copy; 2022 Athir Care.</p>
+                        <p class="text-grey-bg1">All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- FOOTER (end) -->
+
+
+
+
+
+    <!-- Swiper JS  -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Tom Select  -->
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.0.3/dist/js/tom-select.complete.min.js"></script>
+    <!-- the main JavaScript  -->
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

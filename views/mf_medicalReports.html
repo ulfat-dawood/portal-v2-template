@@ -3,7 +3,7 @@
 
 <head>
     <!-- the css output purged file  -->
-    <link rel="stylesheet" href="./css/tailwind/tailwind_output.css">
+    <link rel="stylesheet" href="../css/tailwind/tailwind_output.css">
     <!-- tom select  -->
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.3/dist/css/tom-select.css" rel="stylesheet">
     <!-- Google fonts -->
@@ -372,394 +372,105 @@
 
 
     <div class="content-wrapper min-h-screen" >
-       <div class="container my-10">
-        <div class="flex items-start gap-10">
+        <div class="container xl:px-[9vw]">
 
-            <!-- start section  -->
-            <div class="basis-1/4 flex-grow-0 flex-shrink-0 hidden lg:block">
-                <div class="box p-5 space-y-5">
+            <div class="flex gap-10 my-5 items-stretch h-[75vh] lg:my-10 lg:h-auto">
+                <!-- MF - MENU  -->
+                <div class="basis-4/12 box hidden lg:block">
 
-                    <div class="w-full aspect-square rounded-lg overflow-hidden">
-                        <img src="./img/dr_hussam.png" alt="" class="w-full h-full object-cover">
+                    <!-- patient name  -->
+                    <div class="flex items-center gap-5 bg-grey-bg1 rounded-lg py-3 px-5 m-3"> 
+                        <div class="h-8 w-8 flex-shrink-0 bg-grey-border2 ring-4 ring-grey-border1 rounded-full flex justify-center items-center ">
+                            <i class="icofont-user-alt-7 text-grey-border1"></i>
+                        </div>
+                        <div class="text-grey-text1 text-sm">Ahmed's <br> e-medical file</div>
                     </div>
 
-                    <div class="text-xl text-main-600 font-normal">
-                        Dr. Husam Hussain Darwish
-                    </div>
-                    
-                    <ul class="bg-grey-bg2 rounded-lg divide-y-4 divide-white">
-                        <li class="py-3 px-5 flex gap-4">
-                            <i class="icofont-stethoscope text-sm"></i>
-                            <span class="text-sm">Orthopeadic</span>
+                    <!-- menu items  -->
+                    <ul class="flex flex-col gap-8 pt-5 pb-10 pe-3">
+                        <li>
+                            <div class=" flex gap-5 justify-start mf-tab">
+                                <i class="icofont-ui-calendar"></i>
+                                <span class="text-xs font-normal " >Coming appointments</span> 
+                            </div>
                         </li>
-                        <li class="py-3 px-5 flex gap-4">
-                            <i class="icofont-clock-time text-sm"></i>
-                            <span class="text-sm">Nearest appointment today in 1 hours 6 minutes</span>
+
+                        <li>
+                            <div class=" flex gap-5 justify-start mf-tab">
+                                <i class="icofont-history"></i>
+                                <span class="text-xs font-normal " >Passt visits</span> 
+                            </div>
                         </li>
-                        <li class="py-3 px-5 flex gap-4">
-                            <i class="icofont-bill-alt text-sm"></i>
-                            <span class="text-sm">
-                                SR 250
-                                <span class="text-grey-border3 text-xs line-through" >SR 500</span>
-                                <span class="text-secondary-300 font-normal text-xs bg-secondary-100 rounded-full px-1">-50%</span>
-                            </span>
+
+
+                        <li>
+                            <div class=" flex gap-5 justify-start mf-tab">
+                                <i class="icofont-thermometer"></i>
+                                <span class="text-xs font-normal " >Sick leaves</span> 
+                            </div>
                         </li>
+
+                        <li>
+                            <div class=" flex gap-5 justify-start mf-tab">
+                                <i class="icofont-pills"></i>
+                                <span class="text-xs font-normal " >Prescriptions</span> 
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class=" flex gap-5 justify-start mf-tab">
+                                <i class="icofont-radio-active"></i>
+                                <span class="text-xs font-normal " >Radiology</span> 
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class=" flex gap-5 justify-start mf-tab">
+                                <i class="icofont-laboratory"></i>
+                                <span class="text-xs font-normal " >Lab tests</span> 
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class=" flex gap-5 justify-start mf-tab active">
+                                <i class="icofont-paperclip"></i>
+                                <span class="text-xs font-normal " >Medical reports</span> 
+                            </div>
+                        </li>
+
                     </ul>
 
-                    <div>
-                        <div class="text-sm">Specialized in</div>
-                        <!-- tags  -->
-                        <ul class="flex gap-2 flex-wrap mt-2">
-                            <li class="bg-main-200 rounded-full hover:bg-main-300">
-                                <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
-                                    Hand and upper limb surgery
-                                </a>
-                            </li>
-                            <li class="bg-main-200 rounded-full hover:bg-main-300">
-                                <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
-                                    Bones
-                                </a>
-                            </li>
-                            <li class="bg-main-200 rounded-full hover:bg-main-300">
-                                <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
-                                    Adult orthopedic
-                                </a>
-                            </li>
-                     
-                        </ul>
-                    </div>
-
                 </div>
+
+                <!-- MF - CONTENT  -->
+                <div class="basis-full box flex flex-col p-1.5 sm:3 md:p-5 lg:p-10">
+                    <!-- TITLE  -->
+                    <h2 class="mb-5 text-sm flex-shrink-0 flex-grow-0  text-center md:text-start " >Medical reports</h2>
+
+                    <!-- CONTENT  -->
+                    <div class="flex-grow relative">
+                        <!-- FIXED CONTETN WRAPPER  -->
+                        <div id="MF-FILE-CONTENT" class=" absolute left-0 right-0 top-0 bottom-0 overflow-y-auto">
+
+                            <!-- Coming appointments  -->
+                            <div  class="timeline flex flex-col me-1">
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-
-            <!-- end section  -->
-            <!-- <div class="basis-3/4 flex-grow-0  flex flex-col gap-5"> JEEEEEEE -->
-            <div class="basis-full flex-grow-0 flex flex-col gap-5 flex-shrink-0 min-h-0 min-w-0 lg:basis-3/4">
-
-                <!-- DOCTOR CARD (MOBILE)  -->
-                <div class="box flex flex-col rounded-none sm:rounded-lg sm:flex-row lg:hidden">
-                    <!-- doctor img  -->
-                    <div class="hidden overflow-hidden basis-3/12 relative rounded-lg sm:rounded-te-none sm:rounded-be-none sm:block">
-                        <figure class="absolute w-full h-full">
-                            <a href="#"><img class="object-cover w-full h-full" src="./img/dr_hussam.png" alt=""></a>
-                        </figure>
-                    </div>
-                    <!-- card information -->
-                    <div class="flex-grow divide-y divide-grey-border1">
-                        <!-- doctor info  -->
-                        <div class="flex flex-col justify-between p-3 hover:bg-grey-bg1 md:flex-row">
-                            <!-- start  -->
-                            <div class="flex flex-col gap-5">
-                                <div class="flex gap-2">
-                                    <figure class="h-14 w-14 rounded-lg overflow-hidden sm:hidden">
-                                        <img class="w-full h-full object-cover" src="./img/dr_hussam.png" alt="">
-                                    </figure>
-                                    <div>
-                                        <div class="font-normal text-sm sm:text-lg ">Dr. Hussam Hasan Darwish</div>
-                                        <div class="text-grey-border3 text-sm">Orthopeadic</div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div class="text-grey-border3 text-sm"> 
-                                        <i class="icofont-bill-alt text-grey-border3 text-sm"></i> 
-                                        SR 250
-                                        <span class="text-grey-border3 text-xs line-through" >SR 500</span>
-                                        <span class="text-secondary-300 font-normal text-xs bg-secondary-100 rounded-full px-1">-50%</span>
-                                    </div>
-                                    <div class="text-grey-border3 text-sm">
-                                        <i class="icofont-clock-time text-grey-border3 text-xs"></i> 
-                                        Nearest appoitnemt today in 
-                                        <span class="text-grey-border3 text-xs rounded-full bg-grey-bg2 px-2 font-normal ">1 hours 6 minutes</span>
-                                    </div>
-                                </div>
-
-                                <div class="pt-0">
-                                    <div class="text-sm">Specialized in</div>
-                                    <!-- tags  -->
-                                    <ul class="flex gap-2 flex-wrap mt-2">
-                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
-                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
-                                                Hand and upper limb surgery
-                                            </a>
-                                        </li>
-                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
-                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
-                                                Bones
-                                            </a>
-                                        </li>
-                                        <li class="bg-main-200 rounded-full hover:bg-main-300">
-                                            <a href="#" class="px-3 py-1 text-xs text-main-600 font-normal">
-                                                Adult orthopedic
-                                            </a>
-                                        </li>
-                                    
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-                <!-- CLINIC INFO  -->
-                <div class="box hover:bg-grey-bg1 rounded-none sm:rounded-lg ">
-                    <a href="#">
-                        <div class="flex divide-x divide-grey-border1">
-                            <div class="p-5">
-                                <figure class=" h-full">
-                                    <img src="./img/mafasel_logo.png" alt="" class="h-full w-full object-contain">
-                                </figure>
-                            </div>
-                            <div class="p-5 space-y-1">
-                                <div class="text-sm font-normal">Mafasel Clinic</div>
-                                <div class="underline text-xs text-grey-border3">
-                                    <i class="icofont-location-pin text-grey-border3"></i>
-                                    Malik road, Jeddah, Saudi arabia
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- DR INFO LIST  -->
-                <div class="box p-5 rounded-none sm:rounded-lg ">
-                    <div class="font-normal">About Dr. Husam</div>
-                    <ul class="ms-9 mt-3 space-y-2 list-disc list-outside">
-
-                        <li class="text-grey-border3 text-sm">
-                               Eligendi mollitia quod ex minus sit provident eos exercitationem corporis quae.
-                        </li>                      
-                        
-                        <li class="text-grey-border3 text-sm">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </li>
-
-                        <li class="text-grey-border3 text-sm">
-                            Consequatur magni voluptatem quisquam libero.
-                        </li>                      
-                        
-                        <li class="text-grey-border3 text-sm">
-                            Ab a assumenda maxime ipsa non dolor dignissimos excepturi odit esse aut possimus molestias doloremque nihil officia exercitationem quos rem voluptas, reiciendis dolorum laboriosam optio fugiat.
-                        </li>
-
-                        <li class="text-grey-border3 text-sm">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        </li>                      
-                        
-                        <li class="text-grey-border3 text-sm">
-                            Ea illum deserunt dignissimos cupiditate optio recusandae delectus eligendi culpa sit nam qui vero magni, quisquam id iure necessitatibus suscipit ipsum? Laboriosam.
-                        </li>
-
-                        
-                    </ul>
-                </div>
-
-                <!-- appointment slots -->
-                <div id="slots" class="box p-5 rounded-none sm:rounded-lg ">
-
-                    <div class="font-normal mb-5">Select a day</div>
-
-                    <div class="bg-grey-bg2 w-full rounded-lg p-3">
-
-                        <div class="parners-swiper-container relative">
-                            <div class="swiper available-days w-11/12 m-auto">
-                                <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper ">
-
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <!-- ITEM  -->
-                                    <div class="swiper-slide bg-white p-1.5 rounded-xl !w-28 cursor-pointer group">
-                                        <div class="rounded-xl overflow-hidden">
-                                            <div class="bg-main-100 text-xs font-medium px-3 py-1 text-center text-main-600 group-hover:bg-main-200">
-                                                Today
-                                            </div>
-                                            <div class="bg-white text-xs font-medium px-3 py-1 text-center group-hover:bg-main-100 group-hover:text-main-600">
-                                                1-8-2022
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                            </div>
-                            <!-- navigation buttons -->
-                            <div class="swiper-button-prev days !hidden md:!flex"></div>
-                            <div class="swiper-button-next days !hidden md:!flex"></div>
-                            <!-- pagination -->
-                            <div class="swiper-pagination days "></div>
-                        </div>
-
-                    </div>
-
-                    <div class="slots w-10/12 my-10 mx-auto justify-between">
-                        <div class="flex flex-wrap gap-x-6 gap-y-4">
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-                            <div class="rounded-lg bg-grey-bg1 px-4 py-2 text-xs font-medium hover:bg-grey-bg2 cursor-pointer">
-                                9:00 am
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
         </div>
-       </div> 
     </div>
 
 
     <!-- FOOTER (start) -->
-    <section id="footer" style="background-image: linear-gradient(rgba(40, 87, 93, 0.89), rgba(40, 87, 93, 0.89)), url('../../img/footer-bg.jpeg');background-repeat: no-repeat; background-size: cover;">
+    <section id="footer" style="background-image: linear-gradient(rgba(40, 87, 93, 0.89), rgba(40, 87, 93, 0.89)), url('../.../img/footer-bg.jpeg');background-repeat: no-repeat; background-size: cover;">
         <div class="container flex flex-col ">
 
             <!-- TOP PART -->
@@ -803,12 +514,12 @@
                         <p class="text-grey-bg1">Athir Portal powered by Athir corporation</p>
                         <p class="text-grey-bg1"><a href="https://athir.com.sa">www.athir.com.sa</a></p>
                     </div>
-                    <img class="h-full " src="./img/corp_white_logo.png" alt="">
+                    <img class="h-full " src="../img/corp_white_logo.png" alt="">
                 </div>
 
                 <!-- athir care  -->
                 <div class="flex flex-col sm:flex-row gap-2 justify-start items-center lg:w-6/12 ">
-                    <img class="h-full " src="./img/white_logo.png" alt="">
+                    <img class="h-full " src="../img/white_logo.png" alt="">
                     <div class="text-center sm:text-start" >
                         <p class="text-grey-bg1"> Copyright &copy; 2022 Athir Care.</p>
                         <p class="text-grey-bg1">All Rights Reserved</p>
