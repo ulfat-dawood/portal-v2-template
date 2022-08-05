@@ -7,7 +7,8 @@
 - SWIPER JS PARNERS
 - SWIPER JS DAYS
 - MODAL
-- PRESCRIPTIONS + LAB ACCORDION
+- PRESCRIPTIONS ACCORDION
+- LAB TESTS ACCORDION
 
 ========== TABLE OF CONTENT end ==========
 */
@@ -223,24 +224,47 @@ openModal.forEach((btn)=>{
 ////////// MODAL (end) //////////
 
 
-////////// PRESCRIPTIONS + LAB ACCORDION (start) //////////
-const expandBtns = document.querySelectorAll('[data-expand]');
+////////// PRESCRIPTIONS ACCORDION (start) //////////
+const expandPrescriptionBtns = document.querySelectorAll('[data-expand-prescriptions]');
 
-expandBtns.forEach((expandBtn)=>{
+expandPrescriptionBtns.forEach((expandBtn)=>{
   expandBtn.addEventListener('click', ()=>{
-    console.log('JO')
-    const prescription = document.querySelector(expandBtn.dataset.expand); 
+    const prescription = document.querySelector(expandBtn.dataset.expandPrescriptions);
+ 
     prescription.classList.toggle('h-auto');
     prescription.classList.toggle('h-0');
 
     expandBtn.classList.toggle('expand');
     expandBtn.classList.toggle('collapes');
 
-    if(expandBtn.classList.contains('expand')){
+    if(expandBtn.classList.contains('collapes')){
       expandBtn.innerHTML= 'Show prescriptions <i class="text-secondary-300 icofont-rounded-right"></i>'
     }else{
-      expandBtn.innerHTML= 'hide prescriptions <i class="text-secondary-300 icofont-rounded-up"></i>'
+      expandBtn.innerHTML= 'Hide prescriptions <i class="text-secondary-300 icofont-rounded-up"></i>'
     }
   })
 })
-////////// PRESCRIPTIONS + LAB ACCORDION (end) //////////
+////////// PRESCRIPTIONS ACCORDION (end) //////////
+
+
+////////// LAB TESTS ACCORDION (start) //////////
+const expandLabBtns = document.querySelectorAll('[data-expand-prescriptions]');
+
+expandLabBtns.forEach((expandBtn)=>{
+  expandBtn.addEventListener('click', ()=>{
+    const prescription = document.querySelector(expandBtn.dataset.expandPrescriptions);
+ 
+    prescription.classList.toggle('h-auto');
+    prescription.classList.toggle('h-0');
+
+    expandBtn.classList.toggle('expand');
+    expandBtn.classList.toggle('collapes');
+
+    if(expandBtn.classList.contains('collapes')){
+      expandBtn.innerHTML= 'Show lab tests <i class="text-secondary-300 icofont-rounded-right"></i>'
+    }else{
+      expandBtn.innerHTML= 'Hide lab tests <i class="text-secondary-300 icofont-rounded-up"></i>'
+    }
+  })
+})
+////////// LAB TESTS ACCORDION (end) //////////
