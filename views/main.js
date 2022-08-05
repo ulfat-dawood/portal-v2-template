@@ -1,5 +1,5 @@
 /*
-////// TABLE OF CONTENT start //////
+========== TABLE OF CONTENT start ==========
 
 - SIDE BAR
 - TOM SELECT
@@ -7,8 +7,9 @@
 - SWIPER JS PARNERS
 - SWIPER JS DAYS
 - MODAL
+- PRESCRIPTIONS + LAB ACCORDION
 
-////// TABLE OF CONTENT end //////
+========== TABLE OF CONTENT end ==========
 */
 
 
@@ -220,3 +221,26 @@ openModal.forEach((btn)=>{
 
 
 ////////// MODAL (end) //////////
+
+
+////////// PRESCRIPTIONS + LAB ACCORDION (start) //////////
+const expandBtns = document.querySelectorAll('[data-expand]');
+
+expandBtns.forEach((expandBtn)=>{
+  expandBtn.addEventListener('click', ()=>{
+    console.log('JO')
+    const prescription = document.querySelector(expandBtn.dataset.expand); 
+    prescription.classList.toggle('h-auto');
+    prescription.classList.toggle('h-0');
+
+    expandBtn.classList.toggle('expand');
+    expandBtn.classList.toggle('collapes');
+
+    if(expandBtn.classList.contains('expand')){
+      expandBtn.innerHTML= 'Show prescriptions <i class="text-secondary-300 icofont-rounded-right"></i>'
+    }else{
+      expandBtn.innerHTML= 'hide prescriptions <i class="text-secondary-300 icofont-rounded-up"></i>'
+    }
+  })
+})
+////////// PRESCRIPTIONS + LAB ACCORDION (end) //////////

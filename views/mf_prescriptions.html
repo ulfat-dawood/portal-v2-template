@@ -443,7 +443,7 @@
                 </div>
 
                 <!-- MF - CONTENT  -->
-                <div class="basis-full box flex flex-col p-1.5 sm:3 md:p-5 lg:p-10">
+                <div class="basis-full box flex flex-col p-1.5 sm:3 md:p-5 lg:p-10 rounded-none sm:rounded-lg">
                     <!-- TITLE  -->
                     <h2 class="mb-5 text-sm flex-shrink-0 flex-grow-0  text-center md:text-start " >Prescriptions</h2>
 
@@ -454,7 +454,7 @@
 
 
                             <!-- Prescription cards  -->
-                            <div  class="flex gap-y-10 me-1 justify-center ">
+                            <div  class="flex flex-col gap-y-10 me-1 justify-center ">
 
 
                                 <!-- CARD #1  -->
@@ -480,7 +480,203 @@
 
 
                                     <!-- PRESCRIPTIONS  -->
-                                    <div id="prescriptions-1" class=" overflow-x-auto h-auto">
+                                    <div id="prescriptions-1" class="transition-all h-0 overflow-x-auto ">
+                                        <div class="flex flex-col gap-0.5 min-w-[450px]">
+
+                                            <!-- ROW TITLE -->
+                                            <div class="bg-white rounded-lg flex gap-5 px-5 py-1.5">
+
+                                                <!-- name -->
+                                                <div class="w-4/12 felx-shrink-0 flex-grow-0 text-main-600 text-xs font-medium">
+                                                    Medication
+                                                </div>
+
+                                                <!-- dosage  -->
+                                                <div class="w-2/12 felx-shrink-0 flex-grow-0 text-main-600 text-xs font-medium">
+                                                    Dosage
+                                                </div>
+
+                                                <!-- instructions  -->
+                                                <div class="w-6/12 felx-shrink-0 flex-grow-0 text-main-600 text-xs font-medium">
+                                                    Instructions
+                                                </div>
+                                            </div>
+
+                                            <!-- ROW #1 -->
+                                            <div class="bg-white rounded-lg flex gap-5 px-5 py-1.5">
+
+                                                <!-- name -->
+                                                <div class="w-4/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    Beclometasone inhalers
+                                                </div>
+
+                                                <!-- dosage  -->
+                                                <div class="w-2/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    2 puffs
+                                                </div>
+
+                                                <!-- instructions  -->
+                                                <div class="w-6/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    all day long Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, autem!
+                                                </div>
+                                            </div>
+
+                                            <!-- ROW #2 -->
+                                            <div class="bg-white rounded-lg flex gap-5 px-5 py-1.5">
+
+                                                <!-- name -->
+                                                <div class="w-4/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    Felodipine
+                                                </div>
+
+                                                <!-- dosage  -->
+                                                <div class="w-2/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    1 pill
+                                                </div>
+
+                                                <!-- instructions  -->
+                                                <div class="w-6/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    daily for 5 days.
+                                                </div>
+                                            </div>
+          
+
+
+                                        </div>
+                                    </div>
+
+                                    <!-- BUTTONS  -->
+                                    <div class="flex justify-between">
+                                    
+                                        <!-- Expand btn  -->
+                                        <div data-expand="#prescriptions-1" class="expand border border-white border-2 rounded-lg bg-secondary-100 px-3 py-1 text-secondary-300 text-xs font-medium w-fit text-center hover:bg-secondary-200 cursor-pointer">
+                                            Show prescriptions
+                                            <i class="text-secondary-300 icofont-rounded-right"></i>
+                                        </div>
+                                    
+                                    
+                                        <!-- download btn  -->
+                                        <div class="border border-white border-2 rounded-lg bg-main-200 px-3 py-1 text-main-600 text-xs font-normal w-fit text-center hover:bg-main-300 cursor-pointer">
+                                            <i class="text-main-600 icofont-download"></i>
+                                            Download report
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- CARD #2  -->
+                                <div class="w-full max-w-11/12 mx-auto bg-grey-bg2 p-3 rounded-lg flex flex-col gap-3">
+
+                                    <!-- date -->
+                                    <div class="flex justify-end">
+
+                                        <div class="flex-shrink-0 text-xs font-normal text-grey-border3">
+                                            22-2-2022
+                                        </div>
+
+                                    </div>
+
+                                    <!-- doc info  -->
+                                    <div class="flex-grow flex gap-2  bg-white p-2 rounded-lg">
+                                        <i class="icofont-stethoscope text-sm mt-0.5"></i>
+                                        <div>
+                                            <div class="font-normal text-sm"> Dr. Hussam Hassain Darwish</div>
+                                            <div class="text-grey-border3 text-xs ">Mafasel clinics </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- PRESCRIPTIONS  -->
+                                    <div id="prescriptions-2" class="transition-all h-0 overflow-x-auto ">
+                                        <div class="flex flex-col gap-0.5 min-w-[450px]">
+
+                                            <!-- ROW TITLE -->
+                                            <div class="bg-white rounded-lg flex gap-5 px-5 py-1.5">
+
+                                                <!-- name -->
+                                                <div class="w-4/12 felx-shrink-0 flex-grow-0 text-main-600 text-xs font-medium">
+                                                    Medication
+                                                </div>
+
+                                                <!-- dosage  -->
+                                                <div class="w-2/12 felx-shrink-0 flex-grow-0 text-main-600 text-xs font-medium">
+                                                    Dosage
+                                                </div>
+
+                                                <!-- instructions  -->
+                                                <div class="w-6/12 felx-shrink-0 flex-grow-0 text-main-600 text-xs font-medium">
+                                                    Instructions
+                                                </div>
+                                            </div>
+
+                                            <!-- ROW #1 -->
+                                            <div class="bg-white rounded-lg flex gap-5 px-5 py-1.5">
+
+                                                <!-- name -->
+                                                <div class="w-4/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    Beclometasone inhalers
+                                                </div>
+
+                                                <!-- dosage  -->
+                                                <div class="w-2/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    2 puffs
+                                                </div>
+
+                                                <!-- instructions  -->
+                                                <div class="w-6/12 min-w-0 felx-shrink-0 flex-grow-0  text-xs font-normal break-words">
+                                                    all day long Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, autem!
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <!-- BUTTONS  -->
+                                    <div class="flex justify-between">
+                                    
+                                        <!-- Expand btn  -->
+                                        <div data-expand="#prescriptions-2" class="expand border border-white border-2 rounded-lg bg-secondary-100 px-3 py-1 text-secondary-300 text-xs font-medium w-fit text-center hover:bg-secondary-200 cursor-pointer">
+                                            Show prescriptions
+                                            <i class="text-secondary-300 icofont-rounded-right"></i>
+                                        </div>
+                                    
+                                    
+                                        <!-- download btn  -->
+                                        <div class="border border-white border-2 rounded-lg bg-main-200 px-3 py-1 text-main-600 text-xs font-normal w-fit text-center hover:bg-main-300 cursor-pointer">
+                                            <i class="text-main-600 icofont-download"></i>
+                                            Download report
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- CARD #3  -->
+                                <div class="w-full max-w-11/12 mx-auto bg-grey-bg2 p-3 rounded-lg flex flex-col gap-3">
+
+                                    <!-- date -->
+                                    <div class="flex justify-end">
+
+                                        <div class="flex-shrink-0 text-xs font-normal text-grey-border3">
+                                            22-2-2022
+                                        </div>
+
+                                    </div>
+
+                                    <!-- doc info  -->
+                                    <div class="flex-grow flex gap-2  bg-white p-2 rounded-lg">
+                                        <i class="icofont-stethoscope text-sm mt-0.5"></i>
+                                        <div>
+                                            <div class="font-normal text-sm"> Dr. Hussam Hassain Darwish</div>
+                                            <div class="text-grey-border3 text-xs ">Mafasel clinics </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- PRESCRIPTIONS  -->
+                                    <div id="prescriptions-3" class="transition-all h-0 overflow-x-auto ">
                                         <div class="flex flex-col gap-0.5 min-w-[450px]">
 
                                             <!-- ROW TITLE -->
@@ -567,16 +763,11 @@
                                     <div class="flex justify-between">
                                     
                                         <!-- Expand btn  -->
-                                        <div data-expand="#prescriptions-1" class="border border-white border-2 rounded-lg bg-secondary-100 px-3 py-1 text-secondary-300 text-xs font-medium w-fit text-center hover:bg-secondary-200 cursor-pointer">
+                                        <div data-expand="#prescriptions-3" class="expand border border-white border-2 rounded-lg bg-secondary-100 px-3 py-1 text-secondary-300 text-xs font-medium w-fit text-center hover:bg-secondary-200 cursor-pointer">
                                             Show prescriptions
                                             <i class="text-secondary-300 icofont-rounded-right"></i>
                                         </div>
                                     
-                                        <!-- Expand btn  -->
-                                        <div data-collaps="#prescriptions-1" class="border border-white border-2 rounded-lg bg-secondary-100 px-3 py-1 text-secondary-300 text-xs font-medium w-fit text-center hover:bg-secondary-200 cursor-pointer">
-                                            Hide prescriptions
-                                            <i class="text-secondary-300 icofont-rounded-up"></i>
-                                        </div>
                                     
                                         <!-- download btn  -->
                                         <div class="border border-white border-2 rounded-lg bg-main-200 px-3 py-1 text-main-600 text-xs font-normal w-fit text-center hover:bg-main-300 cursor-pointer">
