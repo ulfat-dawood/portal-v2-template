@@ -248,11 +248,11 @@ expandPrescriptionBtns.forEach((expandBtn)=>{
 
 
 ////////// LAB TESTS ACCORDION (start) //////////
-const expandLabBtns = document.querySelectorAll('[data-expand-prescriptions]');
+const expandLabBtns = document.querySelectorAll('[data-expand-lab-tests]');
 
 expandLabBtns.forEach((expandBtn)=>{
   expandBtn.addEventListener('click', ()=>{
-    const prescription = document.querySelector(expandBtn.dataset.expandPrescriptions);
+    const prescription = document.querySelector(expandBtn.dataset.expandLabTests);
  
     prescription.classList.toggle('h-auto');
     prescription.classList.toggle('h-0');
