@@ -10057,6 +10057,18 @@ video {
   height: 0px;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.h-1\/3 {
+  height: 33.333333%;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -10630,6 +10642,18 @@ video {
 .bg-blue-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-left-top {
+  background-position: left top;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-top {
+  background-position: top;
 }
 
 .object-contain {

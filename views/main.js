@@ -237,7 +237,7 @@ expandPrescriptionBtns.forEach((expandBtn)=>{
     expandBtn.classList.toggle('expand');
     expandBtn.classList.toggle('collapes');
 
-    if(expandBtn.classList.contains('collapes')){
+    if(expandBtn.classList.contains('expand')){
       expandBtn.innerHTML= 'Show prescriptions <i class="text-secondary-300 icofont-rounded-right"></i>'
     }else{
       expandBtn.innerHTML= 'Hide prescriptions <i class="text-secondary-300 icofont-rounded-up"></i>'
@@ -260,7 +260,7 @@ expandLabBtns.forEach((expandBtn)=>{
     expandBtn.classList.toggle('expand');
     expandBtn.classList.toggle('collapes');
 
-    if(expandBtn.classList.contains('collapes')){
+    if(expandBtn.classList.contains('expand')){
       expandBtn.innerHTML= 'Show lab tests <i class="text-secondary-300 icofont-rounded-right"></i>'
     }else{
       expandBtn.innerHTML= 'Hide lab tests <i class="text-secondary-300 icofont-rounded-up"></i>'
