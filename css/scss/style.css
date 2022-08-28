@@ -23,40 +23,40 @@ body * {
   color: #707070;
 }
 
-.ts-wrapper {
+.ts-wrapperr {
   border-radius: 0px;
   background-color: #f5f5f5 !important;
   color: #909090;
   flex-grow: 1;
   width: 100%;
 }
-.ts-wrapper:hover {
+.ts-wrapperr:hover {
   background-color: #eeeeee !important;
 }
-.ts-wrapper .ts-control {
+.ts-wrapperr .ts-controll {
   background-color: transparent !important;
   border: none;
 }
 
-.select-clinic + .ts-wrapper,
-.banner-select-clinic + .ts-wrapper {
+.select-clinic + .ts-wrapperr,
+.banner-select-clinic + .ts-wrapperr {
   border-start-start-radius: 8px;
   border-end-start-radius: 8px;
 }
-.select-clinic + .ts-wrapper .ts-control,
-.banner-select-clinic + .ts-wrapper .ts-control {
+.select-clinic + .ts-wrapperr .ts-controll,
+.banner-select-clinic + .ts-wrapperr .ts-controll {
   border-start-start-radius: 8px;
   border-end-start-radius: 8px;
 }
 
-.banner-select-doctor + .ts-wrapper,
-.banner-select-clinic + .ts-wrapper {
+.banner-select-doctor + .ts-wrapperr,
+.banner-select-clinic + .ts-wrapperr {
   flex-grow: 1;
   width: 100%;
   width: auto;
 }
-.banner-select-doctor + .ts-wrapper .ts-control,
-.banner-select-clinic + .ts-wrapper .ts-control {
+.banner-select-doctor + .ts-wrapperr .ts-controll,
+.banner-select-clinic + .ts-wrapperr .ts-controll {
   padding: 15px;
 }
 

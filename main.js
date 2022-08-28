@@ -51,7 +51,7 @@ const toggleSidebar = ()=>{
 
 
 ////////// TOM SELECT (start) //////////
-/*
+
 new TomSelect("#select-clinic",{
 	sortField: {
 		field: "text",
@@ -81,7 +81,7 @@ new TomSelect("#banner-select-doctor",{
 	}
 });
 
-*/
+
 ////////// TOM SELECT (end) //////////
 
 

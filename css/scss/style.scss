@@ -63,7 +63,7 @@ body * {
 
 ////////// TOM SELECT CLINIC + DOC (start) //////////
 
-.ts-wrapper {
+.ts-wrapperr {
     border-radius: 0px;
     background-color: $grey-bg2 !important;
     color: $grey-text1;
@@ -72,28 +72,28 @@ body * {
     &:hover{
         background-color: $grey-border1 !important;
     }
-    .ts-control{
+    .ts-controll{
         background-color: transparent !important;
         border: none;
 
     }
 }
-.select-clinic + .ts-wrapper ,
-.banner-select-clinic + .ts-wrapper {
+.select-clinic + .ts-wrapperr ,
+.banner-select-clinic + .ts-wrapperr {
     border-start-start-radius: 8px;
     border-end-start-radius: 8px;
-    .ts-control{
+    .ts-controll{
         border-start-start-radius: 8px;
         border-end-start-radius: 8px;
     }
 }
 
-.banner-select-doctor + .ts-wrapper ,
-.banner-select-clinic + .ts-wrapper {
+.banner-select-doctor + .ts-wrapperr ,
+.banner-select-clinic + .ts-wrapperr {
     flex-grow: 1;
     width: 100%;
     width: auto;
-    .ts-control{
+    .ts-controll{
         padding: 15px;
 
     }
