@@ -93,7 +93,8 @@
             <div class="modal-content">
 
                 <form class="flex w-full flex-col gap-0.5 md:flex-row ">
-                    <select name="clinic" id="modal-select-clinic" class="modal-select-clinic"
+                    <select name="clinic" id="modal-select-clinic" class="modal-select-clinic
+                    flex-grow bg-grey-bg2 rounded-s-lg"
                         placeholder="Select clinic" autocomplete="off">
                         <option value="Dental">Dental</option>
                         <option value="Dermatology">Dermatology</option>
@@ -102,7 +103,8 @@
                         <option value="Gynacology">Gynacology</option>
                     </select>
 
-                    <select name="dctor" id="modal-select-doctor" class="modal-select-doctor"
+                    <select name="dctor" id="modal-select-doctor" class="modal-select-doctor
+                    flex-grow bg-grey-bg2"
                         placeholder="Type dctor/hospital name" autocomplete="off">
                         <optgroup label="Centers"></optgroup>
                         <option value="Mafasel">Mafasel</option>
@@ -239,7 +241,9 @@
 
         <!-- SEARCH BAR -->
         <form class="gap-0.5 hidden w-1/3 lg:flex">
-            <select name="clinic" id="select-clinic" class="select-clinic" placeholder="Select clinic"
+            <select name="clinic" id="select-clinic" class="select-clinic
+            flex-grow bg-grey-bg2 rounded-s-lg" 
+            placeholder="Select clinic"
                 autocomplete="off">
                 <option value="Dental">Dental</option>
                 <option value="Dermatology">Dermatology</option>
@@ -248,7 +252,9 @@
                 <option value="Gynacology">Gynacology</option>
             </select>
 
-            <select name="doctor" id="select-doctor" class="select-doctor" placeholder="Type doctor/hospital name"
+            <select name="doctor" id="select-doctor" class="select-doctor
+            flex-grow bg-grey-bg2" 
+            placeholder="Type doctor/hospital name"
                 autocomplete="off">
                 <option value="Dental">Mafasel</option>
                 <option value="Dermatology">Saba</option>
@@ -379,8 +385,9 @@
                 <div class="text-4xl mt-2 text-center lg:text-left">And <span class="text-main-600">book</span> an
                     appointment now</div>
 
-                <form class="flex w-full flex-col gap-0.5 mt-10 md:flex-row ">
-                    <select name="clinic" id="banner-select-clinic" class="banner-select-clinic"
+                <form class="flex w-full flex-col gap-0.5 mt-10 md:flex-row h-12">
+                    <select name="clinic" id="banner-select-clinic" class="banner-select-clinic 
+                    flex-grow bg-grey-bg2 rounded-s-lg"
                         placeholder="Select clinic" autocomplete="off">
                         <option value="Dental">Dental</option>
                         <option value="Dermatology">Dermatology</option>
@@ -389,7 +396,8 @@
                         <option value="Gynacology">Gynacology</option>
                     </select>
 
-                    <select name="dctor" id="banner-select-doctor" class="banner-select-doctor"
+                    <select name="dctor" id="banner-select-doctor" class="banner-select-doctor 
+                    flex-grow bg-grey-bg2"
                         placeholder="Type dctor/hospital name" autocomplete="off">
                         <optgroup label="Centers"></optgroup>
                         <option value="Mafasel">Mafasel</option>
@@ -399,6 +407,7 @@
                         <option value="Hussam">Dr. Hussam Darwish</option>
                         <option value="Amal">Dr. Amal Faisel</option>
                         <option value="Asma">Dr.Asma Kamel</option>
+                        <option value="Asma">Dr to be. Abrar Batyah.</option>
                         </optgroup>
                     </select>
 

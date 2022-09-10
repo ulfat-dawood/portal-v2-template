@@ -62,7 +62,10 @@ body * {
 
 
 ////////// TOM SELECT CLINIC + DOC (start) //////////
-
+.ts-control{
+  background-color: transparent !important;
+  border: none !important;
+}
 .ts-wrapperr {
     border-radius: 0px;
     background-color: $grey-bg2 !important;

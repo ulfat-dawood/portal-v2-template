@@ -32,6 +32,11 @@ body * {
   color: #707070;
 }
 
+.ts-control {
+  background-color: transparent !important;
+  border: none !important;
+}
+
 .ts-wrapperr {
   border-radius: 0px;
   background-color: #f5f5f5 !important;
@@ -10022,6 +10027,10 @@ video {
   height: 3.5rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -10872,9 +10881,19 @@ video {
   border-bottom-right-radius: 0.5rem;
 }
 
+[dir="ltr"] .rounded-s-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 [dir="rtl"] .rounded-e-lg {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+}
+
+[dir="rtl"] .rounded-s-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 [dir="ltr"] .rounded-te-lg {

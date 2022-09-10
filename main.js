@@ -59,27 +59,27 @@ new TomSelect("#select-clinic",{
 	}
 });
 
-new TomSelect("#select-doctor",{
-	sortField: {
-		field: "text",
-		direction: "asc"
-	}
-});
+// new TomSelect("#select-doctor",{
+// 	sortField: {
+// 		field: "text",
+// 		direction: "asc"
+// 	}
+// });
 
-//banner
-new TomSelect("#banner-select-clinic",{
-	sortField: {
-		field: "text",
-		direction: "asc"
-	}
-});
+// //banner
+// new TomSelect("#banner-select-clinic",{
+// 	sortField: {
+// 		field: "text",
+// 		direction: "asc"
+// 	}
+// });
 
-new TomSelect("#banner-select-doctor",{
-	sortField: {
-		field: "text",
-		direction: "asc"
-	}
-});
+// new TomSelect("#banner-select-doctor",{
+// 	sortField: {
+// 		field: "text",
+// 		direction: "asc"
+// 	}
+// });
 
 
 ////////// TOM SELECT (end) //////////
