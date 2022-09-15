@@ -51,35 +51,18 @@ const toggleSidebar = ()=>{
 
 
 ////////// TOM SELECT (start) //////////
+ 
 
-new TomSelect("#select-clinic",{
-	sortField: {
-		field: "text",
-		direction: "asc"
-	}
-});
+document.querySelectorAll('.search-select').forEach(item => {
+  let settings = {
+    sortField: {
+      field: "text",
+      direction: "asc"
+    }
+  }
+  new TomSelect(item,settings);
+})
 
-// new TomSelect("#select-doctor",{
-// 	sortField: {
-// 		field: "text",
-// 		direction: "asc"
-// 	}
-// });
-
-// //banner
-// new TomSelect("#banner-select-clinic",{
-// 	sortField: {
-// 		field: "text",
-// 		direction: "asc"
-// 	}
-// });
-
-// new TomSelect("#banner-select-doctor",{
-// 	sortField: {
-// 		field: "text",
-// 		direction: "asc"
-// 	}
-// });
 
 
 ////////// TOM SELECT (end) //////////
